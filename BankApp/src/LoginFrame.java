@@ -48,7 +48,8 @@ public class LoginFrame extends JFrame {
                         JOptionPane.showMessageDialog(LoginFrame.this, "Wrong Username & Password");
                     }
                 } catch (SQLException sqlException) {
-                    sqlException.printStackTrace();
+                    // Error 12: Database is off or Your connection is invalid!
+                    JOptionPane.showMessageDialog(LoginFrame.this, "Error 12!");
                 }
             }
         });
