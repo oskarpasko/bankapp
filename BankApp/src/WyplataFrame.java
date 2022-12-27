@@ -16,9 +16,7 @@ public class WyplataFrame extends JFrame {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispose();
-                MainFrame n = new MainFrame();
-                n.setVisible(true);
+
             }
         });
     }

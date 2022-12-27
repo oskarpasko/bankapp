@@ -14,7 +14,7 @@ public class MainFrame extends JFrame {
     private JLabel idValueLabel;
     private JLabel saldoValueLabel;
 
-    public MainFrame() {
+    public MainFrame(String client_number) {
         super("MainFrame");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -22,38 +22,38 @@ public class MainFrame extends JFrame {
 
 
 
-        String[] columnNames = {"Nr Karty",
-                "Rodzaj karty"};
+//        String[] columnNames = {"Nr Karty",
+//                "Rodzaj karty"};
+//
+//        Object[][] data = {
+//                {"14151515", "Kredytowa"},
+//                {"23523525", "Debetowa"}
+//        };
 
-        Object[][] data = {
-                {"14151515", "Kredytowa"},
-                {"23523525", "Debetowa"}
-        };
-
-        kartyTable = new JTable(data, columnNames);
+//        kartyTable = new JTable(data, columnNames);
 
         wyjdzButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                LoginFrame n = new LoginFrame();
-                n.setVisible(true);
+                LoginFrame login = new LoginFrame();
+                login.setVisible(true);
             }
         });
         wplataButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                WplataFrame n = new WplataFrame();
-                n.setVisible(true);
+                WplataFrame wplata = new WplataFrame();
+                wplata.setVisible(true);
             }
         });
         wyplataButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                WyplataFrame n = new WyplataFrame();
-                n.setVisible(true);
+                WyplataFrame wyplata = new WyplataFrame();
+                wyplata.setVisible(true);
             }
         });
     }
