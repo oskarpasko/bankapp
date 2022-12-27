@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainFrame extends JFrame {
     private JPanel panel1;
@@ -11,11 +13,6 @@ public class MainFrame extends JFrame {
     private JTable historiaTable;
     private JLabel idValueLabel;
     private JLabel saldoValueLabel;
-
-    public static void main(String[] args) {
-        MainFrame panel = new MainFrame();
-        panel.setVisible(true);
-    }
 
     public MainFrame() {
         super("MainFrame");
@@ -35,6 +32,30 @@ public class MainFrame extends JFrame {
 
         kartyTable = new JTable(data, columnNames);
 
+        wyjdzButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                LoginFrame n = new LoginFrame();
+                n.setVisible(true);
+            }
+        });
+        wplataButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                WplataFrame n = new WplataFrame();
+                n.setVisible(true);
+            }
+        });
+        wyplataButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                WyplataFrame n = new WyplataFrame();
+                n.setVisible(true);
+            }
+        });
     }
 
 
