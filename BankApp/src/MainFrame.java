@@ -75,7 +75,7 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                WplataFrame wplata = new WplataFrame();
+                WplataFrame wplata = new WplataFrame(client_nr);
                 wplata.setVisible(true);
             }
         });
