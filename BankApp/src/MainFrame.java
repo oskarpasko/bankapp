@@ -13,6 +13,7 @@ public class MainFrame extends JFrame {
     private JTable kartyTable;
     private JTable historiaTable;
     private JLabel nameField;
+    private JLabel saldoField;
     private JLabel idValueLabel;
     private JLabel saldoValueLabel;
 
