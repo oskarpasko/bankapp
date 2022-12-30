@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d7287cb-3616-4b9a-a4d2-fe5864942f27" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$3.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WplataFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/WplataFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WplataFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/WplataFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
