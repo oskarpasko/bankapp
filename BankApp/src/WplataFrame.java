@@ -15,7 +15,7 @@ public class WplataFrame extends JFrame {
 //        WplataFrame panel = new WplataFrame("1");
 //        panel.setVisible(true);
 //    }
-
+// komentarz
     public WplataFrame(String client_number) {
         super("WplataFrame");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
