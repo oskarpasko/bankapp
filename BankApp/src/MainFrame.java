@@ -56,6 +56,7 @@ public class MainFrame extends JFrame {
     private void DatabaseQueries(String client_nr)
     {
         try {
+            //connection with database
             Connection connection = (Connection) DriverManager.getConnection(DB_URL,
                     "root", "rootroot");
 
@@ -63,18 +64,19 @@ public class MainFrame extends JFrame {
             PreparedStatement st = (PreparedStatement) connection
                     .prepareStatement("SELECT client_fname FROM BankApp.Client WHERE client_nr=?");
 
-            st.setString(1, client_nr);
-            ResultSet rs = st.executeQuery();
+            st.setString(1, client_nr); // replacment first '?' in query by clinet number
+            ResultSet rs = st.executeQuery();        // execute query
 
+            // chech if some rows are existing in database
+            // if yes then download first name from db and output in nameField
+            //if no then ouput error
             if (rs.next()) {
                 String clientName = rs.getString("client_fname");
-
                 nameField.setText("Witaj, " + clientName);
-
             } else {
                 // Error 123: Data in database are not comipled!
                 JOptionPane.showMessageDialog(MainFrame.this, "Error 123!");
-            }//END QUERY
+            }// END QUERY
 
             /** Query which gets client's all balance **/
             PreparedStatement sumBalance = (PreparedStatement) connection
@@ -89,7 +91,7 @@ public class MainFrame extends JFrame {
             } else {
                 // Error 123: Data in database dose not exist!
                 JOptionPane.showMessageDialog(MainFrame.this, "Error 123!");
-            }//END QUERY
+            }// END QUERY
 
             /** Query which gets balance for our client's each card **/
             PreparedStatement allBalances = (PreparedStatement) connection
@@ -97,7 +99,9 @@ public class MainFrame extends JFrame {
 
             allBalances.setString(1, client_nr);
             ResultSet sumAllBalances = allBalances.executeQuery();
+            // END QUERY
 
+            /** Query which return count of client's cards **/
             PreparedStatement countRows = (PreparedStatement) connection
                     .prepareStatement("SELECT count(card_nr) as countRows FROM BankApp.Card WHERE client_nr =?");
 
@@ -105,13 +109,13 @@ public class MainFrame extends JFrame {
             ResultSet countRowsResult = countRows.executeQuery();
             int rows = 0;
 
-            if(countRowsResult.next())
-            {
-                rows = countRowsResult.getInt(1);
-            }
+            // download how many rows/cards have our client
+            if(countRowsResult.next()) rows = countRowsResult.getInt(1);
 
+            //declaration 2d object of data which we are gonna use later
             Object[][] data = new Object[rows][4];
 
+            // mechanism to write all data from database to out variable "data", dirst rows then columns
             for(int r=0;r<rows;r++) {
                 for(int c=0;c<3;c++){
                     int i = 0;
@@ -130,8 +134,10 @@ public class MainFrame extends JFrame {
                 }
             }
 
-            String[] naglowek = {"Numer Karty", "Data Ważności", "Typ Karty", "Saldo Karty"};
-            kartyTable.setModel(new DefaultTableModel(data, naglowek));
+            // add headers to table and then display it (table)
+            String[] headers = {"Numer Karty", "Data Ważności", "Typ Karty", "Saldo Karty"};
+            kartyTable.setModel(new DefaultTableModel(data, headers));
+            // END QUERY
 
         } catch (SQLException sqlException) {
             // Error 12: Database is off or Your connection is invalid!
