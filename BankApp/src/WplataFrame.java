@@ -8,6 +8,7 @@ public class WplataFrame extends JFrame {
     private JSpinner spinnerAmount;
     private JButton OKButton;
     private JComboBox comboCards;
+    private JButton backButton;
     float balance;
     int spinner;
 
@@ -15,7 +16,7 @@ public class WplataFrame extends JFrame {
 //        WplataFrame panel = new WplataFrame("1");
 //        panel.setVisible(true);
 //    }
-// komentarz
+
     public WplataFrame(String client_nr) {
         super("WplataFrame");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
@@ -30,17 +31,27 @@ public class WplataFrame extends JFrame {
                 balance = Float.parseFloat(textValue.getText());
                 spinner = (Integer) spinnerAmount.getValue();
                 if(balance>=10&&balance<=1000&&spinner>=1&&spinner<=10) {
-                    if((balance!=10&&balance!=20&&balance!=50&&balance!=100&&balance!=200&&balance!=500)&&spinner==1) {
-                        System.out.println("Nie wpłaci kwoty");
+                    if(((balance!=10&&balance!=20&&balance!=50&&balance!=100&&balance!=200&&balance!=500)&&spinner==1)||balance==10&&spinner>1) {
+                        JOptionPane.showMessageDialog(WplataFrame.this,"Błędna kwota!");
                     }
                     else {
-
                 dispose();
                 MainFrame main = new MainFrame(client_nr);
                 main.setVisible(true);
                     }
                 }
+                else {
+                    JOptionPane.showMessageDialog(WplataFrame.this,"Błędna kwota!");
+                }
 
+            }
+        });
+        backButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                MainFrame main = new MainFrame(client_nr);
+                main.setVisible(true);
             }
         });
     }
