@@ -15,11 +15,6 @@ public class WplataFrame extends JFrame {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/BankApp";
 
-//    public static void main(String[] args) {
-//        WplataFrame panel = new WplataFrame("1");
-//        panel.setVisible(true);
-//    }
-
     public WplataFrame(String client_nr) {
         super("WplataFrame");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
