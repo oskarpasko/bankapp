@@ -5,20 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4db62497-e7f5-4e2c-ab4a-2b45dae142f7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WplataFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/WplataFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BankApp/WplataFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/WplataFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WplataFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/WplataFrame.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WplataFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WyplataFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/WyplataFrame.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WyplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WyplataFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +38,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.WplataFrame">
+  <component name="RunManager" selected="Application.LoginFrame">
     <configuration name="LoginFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LoginFrame" />
       <module name="BankApp" />
@@ -77,21 +69,22 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LoginFrame" />
         <item itemvalue="Application.WplataFrame" />
         <item itemvalue="Application.WyplataFrame" />
-        <item itemvalue="Application.LoginFrame" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1d7287cb-3616-4b9a-a4d2-fe5864942f27" name="Changes" comment="" />
+      <changelist id="4db62497-e7f5-4e2c-ab4a-2b45dae142f7" name="Changes" comment="" />
       <created>1672162589539</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672162589539</updated>
       <workItem from="1672221369348" duration="1038000" />
+      <workItem from="1672503033443" duration="2833000" />
     </task>
     <servers />
   </component>
