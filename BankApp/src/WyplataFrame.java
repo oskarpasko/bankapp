@@ -74,9 +74,6 @@ public class WyplataFrame extends JFrame {
                         }}
 
                    if (value >= 10 && value % 10 == 0) {
-
-
-
 /**
 * Download cards data QUERY
  *
