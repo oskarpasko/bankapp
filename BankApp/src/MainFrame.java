@@ -27,30 +27,30 @@ public class MainFrame extends JFrame {
 
         DatabaseQueries(client_number);
 
-//        wyjdzButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                dispose();
-//                LoginFrame login = new LoginFrame();
-//                login.setVisible(true);
-//            }
-//        });
-//        wplataButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                dispose();
-//                WplataFrame wplata = new WplataFrame(client_nr);
-//                wplata.setVisible(true);
-//            }
-//        });
-//        wyplataButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                dispose();
-//                WyplataFrame wyplata = new WyplataFrame();
-//                wyplata.setVisible(true);
-//            }
-//        });
+        wyjdzButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                LoginFrame login = new LoginFrame();
+                login.setVisible(true);
+            }
+        });
+        wplataButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                WplataFrame wplata = new WplataFrame(client_number);
+                wplata.setVisible(true);
+            }
+        });
+        wyplataButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                WyplataFrame wyplata = new WyplataFrame(client_number);
+                wyplata.setVisible(true);
+            }
+        });
     }
 
     private void DatabaseQueries(String client_nr)
@@ -59,7 +59,9 @@ public class MainFrame extends JFrame {
             //connection with database
             Connection connection = (Connection) DriverManager.getConnection(DB_URL,
                     "root", "rootroot");
-
+/**
+ * Welcome Query
+ */
             /** Query which is getting first name out client **/
             PreparedStatement st = (PreparedStatement) connection
                     .prepareStatement("SELECT client_fname FROM BankApp.Client WHERE client_nr=?");
@@ -93,13 +95,9 @@ public class MainFrame extends JFrame {
                 JOptionPane.showMessageDialog(MainFrame.this, "Error 123!");
             }// END QUERY
 
-            /** Query which gets balance for our client's each card **/
-            PreparedStatement allBalances = (PreparedStatement) connection
-                    .prepareStatement("SELECT card_nr, card_term_data, card_type, card_balance FROM BankApp.Card WHERE client_nr =?;");
-
-            allBalances.setString(1, client_nr);
-            ResultSet sumAllBalances = allBalances.executeQuery();
-            // END QUERY
+/**
+ *  Cards Queries
+ */
 
             /** Query which return count of client's cards **/
             PreparedStatement countRows = (PreparedStatement) connection
@@ -111,13 +109,21 @@ public class MainFrame extends JFrame {
 
             // download how many rows/cards have our client
             if(countRowsResult.next()) rows = countRowsResult.getInt(1);
+            // END QUERY
+
+            /** Query which gets balance for our client's each card **/
+            PreparedStatement allBalances = (PreparedStatement) connection
+                    .prepareStatement("SELECT card_nr, card_term_data, card_type, card_balance FROM BankApp.Card WHERE client_nr =?;");
+
+            allBalances.setString(1, client_nr);
+            ResultSet sumAllBalances = allBalances.executeQuery();
 
             //declaration 2d object of data which we are gonna use later
             Object[][] data = new Object[rows][4];
 
             // mechanism to write all data from database to out variable "data", dirst rows then columns
             for(int r=0;r<rows;r++) {
-                for(int c=0;c<3;c++){
+                while(true){
                     int i = 0;
                     if (sumAllBalances.next()) {
                         String card_nr = sumAllBalances.getString("card_nr");
@@ -137,6 +143,62 @@ public class MainFrame extends JFrame {
             // add headers to table and then display it (table)
             String[] headers = {"Numer Karty", "Data Ważności", "Typ Karty", "Saldo Karty"};
             kartyTable.setModel(new DefaultTableModel(data, headers));
+            // END QUERY
+
+/**
+ *  Overflows Queries
+ */
+
+            /** Query which return count of client's overflows **/
+            PreparedStatement countOverflowRows = (PreparedStatement) connection
+                    .prepareStatement(
+                            "SELECT COUNT(overflow_id)" +
+                                    "FROM BankApp.Overflow " +
+                                    "LEFT JOIN Card ON Overflow.overflow_send_number = Card.card_nr OR Overflow.overflow_recipent_number = Card.card_nr " +
+                                    "WHERE client_nr =?;");
+
+            countOverflowRows.setString(1, client_nr);
+            ResultSet countAllOverflowRows = countOverflowRows.executeQuery();
+            int overflowRows = 0;
+
+            // download how many overflows have our client
+            if(countAllOverflowRows.next()) overflowRows = countAllOverflowRows.getInt(1);
+
+            /** Query which gets balance for our client's each card **/
+            PreparedStatement allOverflows = (PreparedStatement) connection
+                    .prepareStatement(
+                            "SELECT overflow_send_number, overflow_recipent_number, overflow_data, overflow_amount FROM BankApp.Overflow  " +
+                            "LEFT JOIN Card ON Overflow.overflow_send_number = Card.card_nr OR Overflow.overflow_recipent_number = Card.card_nr  " +
+                            "WHERE client_nr =?");
+
+            allOverflows.setString(1, client_nr);
+            ResultSet sumAllOverflows = allOverflows.executeQuery();
+
+            //declaration 2d object of data which we are gonna use later
+            Object[][] oferflowData = new Object[overflowRows][4];
+
+            // mechanism to write all data from database to out variable "data", dirst rows then columns
+            for(int r=0;r<overflowRows;r++) {
+                while(true){
+                    int i = 0;
+                    if (sumAllOverflows.next()) {
+                        String overflow_send_number = sumAllOverflows.getString("overflow_send_number");
+                        String overflow_recipent_number = sumAllOverflows.getString("overflow_recipent_number");
+                        String overflow_data = sumAllOverflows.getString("overflow_data");
+                        String overflow_amount = sumAllOverflows.getString("overflow_amount");
+
+                        oferflowData[r][i] = overflow_send_number;
+                        oferflowData[r][i+1] = overflow_recipent_number;
+                        oferflowData[r][i+2] = overflow_data;
+                        oferflowData[r][i+3] = overflow_amount;
+                        break;
+                    }
+                }
+            }
+
+            // add headers to table and then display it (table)
+            String[] oferflowHeaders = {"Nr Wysyłającego", "Nr Odbiorcy", "Data Przelewu", "Wartość przelewu"};
+            historiaTable.setModel(new DefaultTableModel(oferflowData, oferflowHeaders));
             // END QUERY
 
         } catch (SQLException sqlException) {

@@ -16,12 +16,14 @@ public class WplataFrame extends JFrame {
 //        panel.setVisible(true);
 //    }
 // komentarz
-    public WplataFrame(String client_number) {
+    public WplataFrame(String client_nr) {
         super("WplataFrame");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(700, 600);
-        String client_nr = client_number;
+
+        System.out.println(client_nr);
+
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
