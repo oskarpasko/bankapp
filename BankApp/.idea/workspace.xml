@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1d7287cb-3616-4b9a-a4d2-fe5864942f27" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginFrame.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +43,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "432",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
