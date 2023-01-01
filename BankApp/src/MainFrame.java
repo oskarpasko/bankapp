@@ -70,6 +70,14 @@ public class MainFrame extends JFrame {
                 przelewy.setVisible(true);
             }
         });
+        dodajButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                AddCard addCard = new AddCard(client_number);
+                addCard.setVisible(true);
+            }
+        });
     }
 
     private void DatabaseQueries(String client_nr)
