@@ -21,10 +21,10 @@ public class WplataFrame extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(700, 600);
 
-        /**
-         * Download cards data QUERY
-         *
-         */
+/**
+ * Download cards data QUERY
+ *
+ */
         String[] cards = new String[0];
         try {
             Connection connection = (Connection) DriverManager.getConnection(DB_URL,
