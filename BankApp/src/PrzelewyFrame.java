@@ -13,7 +13,7 @@ public class PrzelewyFrame extends JFrame {
 
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
-//    public static void main(String[] args) {
+    //    public static void main(String[] args) {
 //        PrzelewyFrame panel = new PrzelewyFrame("1");
 //        panel.setVisible(true);
 //    }
@@ -110,17 +110,6 @@ public class PrzelewyFrame extends JFrame {
                             } else {
                                 r++;
                             }
-
-                        } catch (SQLException sqlException) {
-                            // Error 12: Database is off or Your connection is invalid!
-                            JOptionPane.showMessageDialog(PrzelewyFrame.this, "Error 12!");
-                        }/** END QUERY **/
-
-                        JOptionPane.showMessageDialog(PrzelewyFrame.this,"Poszedł przelew!");
-                        dispose();
-                        MainFrame main = new MainFrame(client_nr);
-                        main.setVisible(true);
-
                         }
                         float balance =  Float.parseFloat((String) finalCardData[r][2]);
                         String card_type = (String) finalCardData[r][1];
@@ -166,20 +155,10 @@ public class PrzelewyFrame extends JFrame {
                                     JOptionPane.showMessageDialog(PrzelewyFrame.this, "Error 12!");
                                 }/** END QUERY **/
 
-
-                        }
-                        float balance =  Float.parseFloat((String) finalCardData[r][2]);
-                        String card_type = (String) finalCardData[r][1];
-                        System.out.println(value);
-                        if(card_type.equals("Kredytowa")) {
-                            if((balance-value)>=-5000) {
-                                // TODO: UPDATE balance
-
                                 JOptionPane.showMessageDialog(PrzelewyFrame.this,"Poszedł przelew o kwocie: "+value+" z karty: "+card_nr+" dla odbiorcy: "+nr_odbiorca);
                                 dispose();
                                 MainFrame main = new MainFrame(client_nr);
                                 main.setVisible(true);
-
 
                             } else JOptionPane.showMessageDialog(PrzelewyFrame.this,"Za mało środków na karcie!");
                         } else {
@@ -224,25 +203,13 @@ public class PrzelewyFrame extends JFrame {
                                     JOptionPane.showMessageDialog(PrzelewyFrame.this, "Error 12!");
                                 }/** END QUERY **/
 
-
-                            } else JOptionPane.showMessageDialog(PrzelewyFrame.this,"Za mało środków na karcie!");
-                        } else {
-                            if(balance-value>=0) {
-                                // TODO: UPDATE balance
-
                                 JOptionPane.showMessageDialog(PrzelewyFrame.this,"Poszedł przelew o kwocie: "+value+" z karty: "+card_nr+" dla odbiorcy: "+nr_odbiorca);
                                 dispose();
                                 MainFrame main = new MainFrame(client_nr);
                                 main.setVisible(true);
 
-
                             } else JOptionPane.showMessageDialog(PrzelewyFrame.this,"Za mało środków na karcie!");
                         }
-
-
-                            } else JOptionPane.showMessageDialog(PrzelewyFrame.this,"Za mało środków na karcie!");
-                        }
-
                     } else {
                         JOptionPane.showMessageDialog(PrzelewyFrame.this,"Przelew musi być większy od 0!");
                     }
