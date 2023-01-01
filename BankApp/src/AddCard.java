@@ -60,7 +60,7 @@ public class AddCard extends JFrame {
                         Connection connection = (Connection) DriverManager.getConnection(DB_URL,
                                 "root", "rootroot");
 
-                        /** Query which is updating balance on card adding value **/
+                        /** Query which is inserting new card to database **/
                         PreparedStatement addCard = (PreparedStatement) connection
                                 .prepareStatement("INSERT INTO card VALUES(?, ?, ?, ?, 0, ?);");
 
