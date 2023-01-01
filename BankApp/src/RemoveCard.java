@@ -93,14 +93,35 @@ public class RemoveCard extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String cardnumber = cardGetter();
-                System.out.println(cardnumber);
                 String[] choices = {"Tak", "Nie"};
                 if(balance==0) {
                     int input = JOptionPane.showOptionDialog(RemoveCard.this,"Czy jesteś pewny, że chcesz usunąć kartę?","Usuń kartę",0, JOptionPane.INFORMATION_MESSAGE, null, choices, null);
                     if(input==0) {
-                        //TODO: baza
-                        System.out.println(Arrays.toString(nr_cards));
+/**
+ * INSERT QUERY
+ *
+ */
+                        try {
+                            Connection connection = (Connection) DriverManager.getConnection(DB_URL,
+                                    "root", "rootroot");
+
+                            /** Query which is inserting new card to database **/
+                            PreparedStatement deleteCard = (PreparedStatement) connection
+                                    .prepareStatement("DELETE FROM bankapp.card WHERE (card_nr =?);");
+
+                            deleteCard.setString(1, cardnumber);
+                            deleteCard.executeUpdate();
+
+                        } catch (SQLException sqlException) {
+                            // Error 12: Database is off or Your connection is invalid!
+                            JOptionPane.showMessageDialog(RemoveCard.this, "Error 12!");
+                        }/** END QUERY **/
+
                         JOptionPane.showMessageDialog(RemoveCard.this,"Usunięto kartę!");
+                        dispose();
+                        MainFrame main = new MainFrame(client_nr);
+                        main.setVisible(true);
+
                     }else JOptionPane.showMessageDialog(RemoveCard.this,"Zrezygnowano z usunięcia karty!");
                 } else JOptionPane.showMessageDialog(RemoveCard.this,"Karta nie może posiadać środków!");
             }

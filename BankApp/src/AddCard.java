@@ -47,7 +47,6 @@ public class AddCard extends JFrame {
                 if(card_nr.equals("")||!isNumeric(card_nr)||card_nr.length()!=16) {
                     JOptionPane.showMessageDialog(AddCard.this,"Podaj prawidłowy numer karty!");
                 } else {
-                    //TODO: dodaj do bazy
                     Random random = new Random();
                     int cvc_number = random.nextInt(900) + 100;
                     LocalDate today = LocalDate.now();
