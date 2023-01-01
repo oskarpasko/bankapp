@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d7287cb-3616-4b9a-a4d2-fe5864942f27" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/LoginFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/LoginFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WplataFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WplataFrame$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WplataFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WplataFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WyplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WyplataFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +41,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.LoginFrame">
     <configuration name="LoginFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LoginFrame" />
@@ -105,6 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1672162589539</updated>
       <workItem from="1672221369348" duration="1038000" />
+      <workItem from="1672600444584" duration="131000" />
     </task>
     <servers />
   </component>

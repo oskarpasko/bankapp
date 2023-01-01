@@ -15,6 +15,9 @@ public class MainFrame extends JFrame {
     private JTable historiaTable;
     private JLabel nameField;
     private JLabel saldoField;
+    private JButton wylogujButton;
+    private JButton dodajButton;
+    private JButton usunButton;
 
     // URL for connection with database
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
