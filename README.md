@@ -2,13 +2,13 @@
 Banking application project for OOP classes at the University.
 
 # Table of contents
-1. [Errors](#Errors)
-- [Error 1](#Error-1)
-- [Error 12](#Error-12)
-- [Error 123](#Error-123)
-2. [Authors](#Authors)
-2. [Technicals](#Technicals)
-2. [License](#License)
+- [Errors](#Errors)
+  - [Error 1](#Error-1)
+  - [Error 12](#Error-12)
+  - [Error 123](#Error-123)
+- [Authors](#Authors)
+- [Technicals](#Technicals)
+- [License](#License)
 
 ## Errors
 List of errors which You can see in application.
