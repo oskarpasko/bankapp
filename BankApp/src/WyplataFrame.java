@@ -142,14 +142,30 @@ public class WyplataFrame extends JFrame {
                          r++;
                         }
                     }
-                    String balance = (String) finalCardData[r][1];
-                    String card_type = (String) finalCardData[r][2];
+                    float balance =  Float.parseFloat((String) finalCardData[r][2]);
+                    String card_type = (String) finalCardData[r][1];
 
-                    
-                    JOptionPane.showMessageDialog(WyplataFrame.this, "Poszło kwota!");
-                    dispose();
-                    MainFrame main = new MainFrame(client_nr);
-                    main.setVisible(true);
+                    if(card_type.equals("Kredytowa")) {
+                        if(balance-value<-5000) {
+                            JOptionPane.showMessageDialog(WyplataFrame.this, "Nie wystarczająca ilość środków na koncie!");
+                        } else {
+                            // TODO: Update kwoty (kwota: value)
+                            JOptionPane.showMessageDialog(WyplataFrame.this, "Wybrano: "+value+"zł z karty: "+card_nr);
+                            dispose();
+                            MainFrame main = new MainFrame(client_nr);
+                            main.setVisible(true);
+
+                        }
+                    } else {
+                     if(value>balance) {
+                        JOptionPane.showMessageDialog(WyplataFrame.this, "Nie wystarczająca ilość środków na koncie!");
+                    } else {
+                        // TODO: Update kwoty (kwota: value)
+                        JOptionPane.showMessageDialog(WyplataFrame.this, "Wybrano: "+value+"zł z karty: "+card_nr);
+                        dispose();
+                        MainFrame main = new MainFrame(client_nr);
+                        main.setVisible(true);
+                    }}
                 } else JOptionPane.showMessageDialog(WyplataFrame.this, "Błędna kwota!");
             }
         });
