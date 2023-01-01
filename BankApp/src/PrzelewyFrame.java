@@ -43,8 +43,10 @@ public class PrzelewyFrame extends JFrame {
                     if(value>0) {
 /**
  * Download cards data QUERY
+ *
  */
-                        String[] cards = new String[0];
+                        Object[][] cardData = new Object[0][];
+                        int rows = 0;
                         try {
                             Connection connection = (Connection) DriverManager.getConnection(DB_URL,
                                     "root", "rootroot");
@@ -55,26 +57,35 @@ public class PrzelewyFrame extends JFrame {
 
                             countRows.setString(1, client_nr);
                             ResultSet countRowsResult = countRows.executeQuery();
-                            int rows = 0;
+                            rows = 0;
 
                             // download how many rows/cards have our client
                             if (countRowsResult.next()) rows = countRowsResult.getInt(1);
                             // END QUERY
 
-                            cards = new String[rows];
-
-                            /** Query which is getting number client's cards **/
+                            /** Query which is getting number, type and balnce client's cards **/
                             PreparedStatement cardInfo = (PreparedStatement) connection
-                                    .prepareStatement("SELECT card_nr FROM bankapp.card WHERE client_nr =?;");
+                                    .prepareStatement("SELECT card_nr, card_type, card_balance FROM bankapp.card WHERE client_nr =?;");
 
                             cardInfo.setString(1, client_nr);
                             ResultSet sumAllCardInfo = cardInfo.executeQuery();
 
-                            for (int i = 0; i < rows; i++) {
-                                if (sumAllCardInfo.next()) {
-                                    String card_nr = sumAllCardInfo.getString("card_nr");
+                            //declaration 2d object of data which we are gonna use later
+                            cardData = new Object[rows][3];
 
-                                    cards[i] = card_nr;
+                            for (int r = 0; r < rows; r++) {
+                                while (true) {
+                                    int i = 0;
+                                    if (sumAllCardInfo.next()) {
+                                        String card_nr = sumAllCardInfo.getString("card_nr");
+                                        String card_type = sumAllCardInfo.getString("card_type");
+                                        String card_balance = sumAllCardInfo.getString("card_balance");
+
+                                        cardData[r][i] = card_nr;
+                                        cardData[r][i + 1] = card_type;
+                                        cardData[r][i + 2] = card_balance;
+                                        break;
+                                    }
                                 }
                             }
                         } catch (SQLException sqlException) {
