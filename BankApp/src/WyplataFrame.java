@@ -149,7 +149,22 @@ public class WyplataFrame extends JFrame {
                         if(balance-value<-5000) {
                             JOptionPane.showMessageDialog(WyplataFrame.this, "Nie wystarczająca ilość środków na koncie!");
                         } else {
-                            // TODO: Update kwoty (kwota: value)
+                            try {
+                                Connection connection = (Connection) DriverManager.getConnection(DB_URL,
+                                        "root", "rootroot");
+
+                                /** Query which is updating balance card balance minus value **/
+                                PreparedStatement updateBalance = (PreparedStatement) connection
+                                        .prepareStatement("UPDATE card SET card_balance = card_balance - " + value + " WHERE card_nr =?;");
+
+                                updateBalance.setString(1, card_nr);
+                                updateBalance.executeUpdate();
+
+                            } catch (SQLException sqlException) {
+                                // Error 12: Database is off or Your connection is invalid!
+                                JOptionPane.showMessageDialog(WyplataFrame.this, "Error 12!");
+                            }/** END QUERY **/
+
                             JOptionPane.showMessageDialog(WyplataFrame.this, "Wybrano: "+value+"zł z karty: "+card_nr);
                             dispose();
                             MainFrame main = new MainFrame(client_nr);
@@ -160,7 +175,22 @@ public class WyplataFrame extends JFrame {
                      if(value>balance) {
                         JOptionPane.showMessageDialog(WyplataFrame.this, "Nie wystarczająca ilość środków na koncie!");
                     } else {
-                        // TODO: Update kwoty (kwota: value)
+                         try {
+                             Connection connection = (Connection) DriverManager.getConnection(DB_URL,
+                                     "root", "rootroot");
+
+                             /** Query which is updating balance card balance minus value **/
+                             PreparedStatement updateBalance = (PreparedStatement) connection
+                                     .prepareStatement("UPDATE card SET card_balance = card_balance - " + value + " WHERE card_nr =?;");
+
+                             updateBalance.setString(1, card_nr);
+                             updateBalance.executeUpdate();
+
+                         } catch (SQLException sqlException) {
+                             // Error 12: Database is off or Your connection is invalid!
+                             JOptionPane.showMessageDialog(WyplataFrame.this, "Error 12!");
+                         }/** END QUERY **/
+
                         JOptionPane.showMessageDialog(WyplataFrame.this, "Wybrano: "+value+"zł z karty: "+card_nr);
                         dispose();
                         MainFrame main = new MainFrame(client_nr);

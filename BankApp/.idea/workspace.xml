@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d7287cb-3616-4b9a-a4d2-fe5864942f27" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/LoginFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/LoginFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WplataFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WplataFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WplataFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WplataFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WyplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WyplataFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +53,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
   <component name="RunManager" selected="Application.LoginFrame">
     <configuration name="LoginFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LoginFrame" />
@@ -71,8 +89,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PrzelewyFrame" />
         <item itemvalue="Application.LoginFrame" />
+        <item itemvalue="Application.PrzelewyFrame" />
         <item itemvalue="Application.WplataFrame" />
         <item itemvalue="Application.WyplataFrame" />
       </list>

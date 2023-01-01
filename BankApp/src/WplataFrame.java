@@ -83,7 +83,7 @@ public class WplataFrame extends JFrame {
                             Connection connection = (Connection) DriverManager.getConnection(DB_URL,
                                     "root", "rootroot");
 
-                            /** Query which is getting number, type and balnce client's cards **/
+                            /** Query which is updating balance on card adding value **/
                             PreparedStatement updateBalance = (PreparedStatement) connection
                                     .prepareStatement("UPDATE card SET card_balance = card_balance + " + value + " WHERE card_nr =?;");
 
