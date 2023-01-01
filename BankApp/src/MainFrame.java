@@ -23,6 +23,7 @@ public class MainFrame extends JFrame {
     private JPanel welcomePanel;
     private JPanel tabsPanel;
     private JPanel buttonsPanel;
+    private JPanel logoutButtons;
 
     // URL for connection with database
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
@@ -32,16 +33,9 @@ public class MainFrame extends JFrame {
         StylesFunction();
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setLayout(new BorderLayout(10,10));
-        panel1.add(welcomePanel,BorderLayout.NORTH);
-        panel1.add(tabsPanel,BorderLayout.CENTER);
-        panel1.add(buttonsPanel,BorderLayout.SOUTH);
-        this.pack();
-
-
+        this.setSize(700,600);
         /** center window **/
         this.setLocationRelativeTo(null);
-
         DatabaseQueries(client_number);
 
         wyjdzButton.addActionListener(new ActionListener() {
