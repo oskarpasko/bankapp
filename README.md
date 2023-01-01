@@ -49,9 +49,9 @@ You should check data in Your Database.
 - [@eltwor](https://www.github.com/eltwor)
 
 ## Technicals
-Version: 1.0 <\br>
-Language: Java <\br>
-SDK: 18.0.2 <\br>
+Version: 1.0 </br>
+Language: Java </br>
+SDK: 18.0.2 </br>
 
 ## License
 
