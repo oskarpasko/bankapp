@@ -14,6 +14,7 @@ public class WyplataFrame extends JFrame {
     private JRadioButton a500RadioButton;
     private JRadioButton wlasnaRadio;
     private JTextField wlasnaText;
+    private JComboBox cardsBox;
     private int value;
 
     // URL for connection with database
@@ -35,10 +36,9 @@ public class WyplataFrame extends JFrame {
         ActionListener listener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if(wlasnaRadio.isSelected()) {
+                if (wlasnaRadio.isSelected()) {
                     wlasnaText.setEnabled(true);
-                }
-                else {
+                } else {
                     wlasnaText.setText("");
                     wlasnaText.setEnabled(false);
                 }
@@ -51,87 +51,108 @@ public class WyplataFrame extends JFrame {
         a300RadioButton.addActionListener(listener);
         a500RadioButton.addActionListener(listener);
         wlasnaRadio.addActionListener(listener);
+/**
+ * Download cards data QUERY
+ *
+ */
+        Object[][] cardData = new Object[0][];
+        int rows = 0;
+        try {
+            Connection connection = (Connection) DriverManager.getConnection(DB_URL,
+                    "root", "rootroot");
 
+            /** Query which return count of client's cards **/
+            PreparedStatement countRows = (PreparedStatement) connection
+                    .prepareStatement("SELECT count(card_nr) as countRows FROM bankapp.card WHERE client_nr =?");
+
+            countRows.setString(1, client_nr);
+            ResultSet countRowsResult = countRows.executeQuery();
+            rows = 0;
+
+            // download how many rows/cards have our client
+            if (countRowsResult.next()) rows = countRowsResult.getInt(1);
+            // END QUERY
+
+            /** Query which is getting number, type and balnce client's cards **/
+            PreparedStatement cardInfo = (PreparedStatement) connection
+                    .prepareStatement("SELECT card_nr, card_type, card_balance FROM bankapp.card WHERE client_nr =?;");
+
+            cardInfo.setString(1, client_nr);
+            ResultSet sumAllCardInfo = cardInfo.executeQuery();
+
+            //declaration 2d object of data which we are gonna use later
+            cardData = new Object[rows][3];
+
+            for (int r = 0; r < rows; r++) {
+                while (true) {
+                    int i = 0;
+                    if (sumAllCardInfo.next()) {
+                        String card_nr = sumAllCardInfo.getString("card_nr");
+                        String card_type = sumAllCardInfo.getString("card_type");
+                        String card_balance = sumAllCardInfo.getString("card_balance");
+
+                        cardData[r][i] = card_nr;
+                        cardData[r][i + 1] = card_type;
+                        cardData[r][i + 2] = card_balance;
+                        break;
+                    }
+                }
+            }
+
+        } catch (SQLException sqlException) {
+            // Error 12: Database is off or Your connection is invalid!
+            JOptionPane.showMessageDialog(WyplataFrame.this, "Error 12!");
+        }/** END QUERY **/
+        String nr_cards[] = new String[rows];
+        for(int i=0;i<rows;i++) {
+            nr_cards[i]= (String) cardData[i][0];
+        }
+        cardsBox.setModel(new DefaultComboBoxModel(nr_cards));
+
+        Object[][] finalCardData = cardData;
         OKButton.addActionListener(new ActionListener() {
-                                       @Override
+            @Override
             public void actionPerformed(ActionEvent e) {
                 if (a50RadioButton.isSelected()) {
-                    value = 50;}
-                else if (a100RadioButton.isSelected()) {
-                    value = 100;}
-                else if (a200RadioButton.isSelected()) {
-                    value = 200;}
-                else if (a300RadioButton.isSelected()) {
-                    value = 300;}
-                else if (a500RadioButton.isSelected()) {
+                    value = 50;
+                } else if (a100RadioButton.isSelected()) {
+                    value = 100;
+                } else if (a200RadioButton.isSelected()) {
+                    value = 200;
+                } else if (a300RadioButton.isSelected()) {
+                    value = 300;
+                } else if (a500RadioButton.isSelected()) {
                     value = 500;
-                    }
-                else if (wlasnaRadio.isSelected()) {
+                } else if (wlasnaRadio.isSelected()) {
                     if (wlasnaRadio.getText().equals("")) {
-                        JOptionPane.showMessageDialog(WyplataFrame.this, "Błędna kwota!");}
-                        else {
-                            value = Integer.parseInt(wlasnaText.getText());
-                        }}
+                        JOptionPane.showMessageDialog(WyplataFrame.this, "Błędna kwota!");
+                    } else {
+                        value = Integer.parseInt(wlasnaText.getText());
+                    }
+                }
 
-                   if (value >= 10 && value % 10 == 0) {
-/**
-* Download cards data QUERY
- *
-*/
-                   try {
-                       Connection connection = (Connection) DriverManager.getConnection(DB_URL,
-                               "root", "rootroot");
+                if (value >= 10 && value % 10 == 0) {
 
-                       /** Query which return count of client's cards **/
-                       PreparedStatement countRows = (PreparedStatement) connection
-                               .prepareStatement("SELECT count(card_nr) as countRows FROM bankapp.card WHERE client_nr =?");
+                    String card_nr = (String) cardsBox.getItemAt(cardsBox.getSelectedIndex());
+                    int r = 0;
+                    while(true) {
+                        if(card_nr.equals(finalCardData[r][0])) {
+                            break;
+                        } else {
+                         r++;
+                        }
+                    }
+                    String balance = (String) finalCardData[r][1];
+                    String card_type = (String) finalCardData[r][2];
 
-                       countRows.setString(1, client_nr);
-                       ResultSet countRowsResult = countRows.executeQuery();
-                       int rows = 0;
-
-                       // download how many rows/cards have our client
-                       if(countRowsResult.next()) rows = countRowsResult.getInt(1);
-                       // END QUERY
-
-                       /** Query which is getting number, type and balnce client's cards **/
-                       PreparedStatement cardInfo = (PreparedStatement) connection
-                               .prepareStatement("SELECT card_nr, card_type, card_balance FROM bankapp.card WHERE client_nr =?;");
-
-                       cardInfo.setString(1, client_nr);
-                       ResultSet sumAllCardInfo = cardInfo.executeQuery();
-
-                       //declaration 2d object of data which we are gonna use later
-                       Object[][] cardData = new Object[rows][3];
-
-                       for(int r=0;r<rows;r++) {
-                           while(true){
-                               int i = 0;
-                               if (sumAllCardInfo.next()) {
-                                   String card_nr = sumAllCardInfo.getString("card_nr");
-                                   String card_type = sumAllCardInfo.getString("card_type");
-                                   String card_balance = sumAllCardInfo.getString("card_balance");
-
-                                   cardData[r][i] = card_nr;
-                                   cardData[r][i+1] = card_type;
-                                   cardData[r][i+2] = card_balance;
-                                   break;
-                               }
-                           }
-                       }
-
-                       } catch (SQLException sqlException) {
-                           // Error 12: Database is off or Your connection is invalid!
-                           JOptionPane.showMessageDialog(WyplataFrame.this, "Error 12!");
-                       }/** END QUERY **/
-
-                       JOptionPane.showMessageDialog(WyplataFrame.this, "Poszło kwota!");
-                       dispose();
-                       MainFrame main = new MainFrame(client_nr);
-                       main.setVisible(true);
-                   }
-                   else JOptionPane.showMessageDialog(WyplataFrame.this, "Błędna kwota!");
-        }});
+                    
+                    JOptionPane.showMessageDialog(WyplataFrame.this, "Poszło kwota!");
+                    dispose();
+                    MainFrame main = new MainFrame(client_nr);
+                    main.setVisible(true);
+                } else JOptionPane.showMessageDialog(WyplataFrame.this, "Błędna kwota!");
+            }
+        });
 
         backButton.addActionListener(new ActionListener() {
             @Override
