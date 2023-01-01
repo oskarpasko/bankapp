@@ -18,7 +18,7 @@ public class LoginFrame extends JFrame {
     private JLabel passLabel;
 
     // URL for connection with database
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/BankApp";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
     public static void main(String[] args) {
         LoginFrame panel = new LoginFrame();
@@ -53,7 +53,7 @@ public class LoginFrame extends JFrame {
                             "root", "rootroot");
 
                     PreparedStatement st = (PreparedStatement) connection
-                            .prepareStatement("SELECT client_nr FROM BankApp.Client WHERE client_nr=? AND client_password=?");
+                            .prepareStatement("SELECT client_nr FROM bankapp.client WHERE client_nr=? AND client_password=?");
 
                     st.setString(1, client_nr);
                     st.setString(2, client_pass);

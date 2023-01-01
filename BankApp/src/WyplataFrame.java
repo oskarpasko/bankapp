@@ -17,7 +17,7 @@ public class WyplataFrame extends JFrame {
     private int value;
 
     // URL for connection with database
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/BankApp";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
     public WyplataFrame(String client_nr) {
         super("WyplataFrame");
@@ -84,7 +84,7 @@ public class WyplataFrame extends JFrame {
 
                        /** Query which return count of client's cards **/
                        PreparedStatement countRows = (PreparedStatement) connection
-                               .prepareStatement("SELECT count(card_nr) as countRows FROM BankApp.Card WHERE client_nr =?");
+                               .prepareStatement("SELECT count(card_nr) as countRows FROM bankapp.card WHERE client_nr =?");
 
                        countRows.setString(1, client_nr);
                        ResultSet countRowsResult = countRows.executeQuery();
@@ -96,7 +96,7 @@ public class WyplataFrame extends JFrame {
 
                        /** Query which is getting number, type and balnce client's cards **/
                        PreparedStatement cardInfo = (PreparedStatement) connection
-                               .prepareStatement("SELECT card_nr, card_type, card_balance FROM BankApp.Card WHERE client_nr =?;");
+                               .prepareStatement("SELECT card_nr, card_type, card_balance FROM bankapp.card WHERE client_nr =?;");
 
                        cardInfo.setString(1, client_nr);
                        ResultSet sumAllCardInfo = cardInfo.executeQuery();

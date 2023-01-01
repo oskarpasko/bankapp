@@ -13,7 +13,7 @@ public class WplataFrame extends JFrame {
     float value;
     int spinner;
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/BankApp";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
     public WplataFrame(String client_nr) {
         super("WplataFrame");
@@ -43,7 +43,7 @@ public class WplataFrame extends JFrame {
 
                             /** Query which return count of client's cards **/
                             PreparedStatement countRows = (PreparedStatement) connection
-                                    .prepareStatement("SELECT count(card_nr) as countRows FROM BankApp.Card WHERE client_nr =?");
+                                    .prepareStatement("SELECT count(card_nr) as countRows FROM bankapp.card WHERE client_nr =?");
 
                             countRows.setString(1, client_nr);
                             ResultSet countRowsResult = countRows.executeQuery();
@@ -53,36 +53,48 @@ public class WplataFrame extends JFrame {
                             if(countRowsResult.next()) rows = countRowsResult.getInt(1);
                             // END QUERY
 
-                            /** Query which is getting number, type and balnce client's cards **/
+                            String[] cards = new String[rows];
+
+                            /** Query which is getting number client's cards **/
                             PreparedStatement cardInfo = (PreparedStatement) connection
-                                    .prepareStatement("SELECT card_nr, card_type, card_balance FROM BankApp.Card WHERE client_nr =?;");
+                                    .prepareStatement("SELECT card_nr FROM bankapp.card WHERE client_nr =?;");
 
                             cardInfo.setString(1, client_nr);
                             ResultSet sumAllCardInfo = cardInfo.executeQuery();
 
-                            //declaration 2d object of data which we are gonna use later
-                            Object[][] cardData = new Object[rows][3];
+                            for(int i=0;i<rows;i++) {
+                                if (sumAllCardInfo.next()) {
+                                    String card_nr = sumAllCardInfo.getString("card_nr");
 
-                            for(int r=0;r<rows;r++) {
-                                while(true){
-                                    int i = 0;
-                                    if (sumAllCardInfo.next()) {
-                                        String card_nr = sumAllCardInfo.getString("card_nr");
-                                        String card_type = sumAllCardInfo.getString("card_type");
-                                        String card_balance = sumAllCardInfo.getString("card_balance");
-
-                                        cardData[r][i] = card_nr;
-                                        cardData[r][i+1] = card_type;
-                                        cardData[r][i+2] = card_balance;
-                                        break;
-                                    }
+                                    cards[i] = card_nr;
                                 }
                             }
+                        } catch (SQLException sqlException) {
+                            // Error 12: Database is off or Your connection is invalid!
+                            JOptionPane.showMessageDialog(WplataFrame.this, "Error 12!");
+                        }/** END QUERY **/
+
+/**
+ * UPDATE QUERY
+ *
+ */
+                        try {
+                            Connection connection = (Connection) DriverManager.getConnection(DB_URL,
+                                    "root", "rootroot");
+
+                            /** Query which is getting number, type and balnce client's cards **/
+                            PreparedStatement updateBalance = (PreparedStatement) connection
+                                    .prepareStatement("UPDATE card SET card_balance = card_balance + " + value + " WHERE card_nr = '1234567890123456';");
+
+//                            updateBalance.setString(1, nr_karty);
+                            updateBalance.executeUpdate();
 
                         } catch (SQLException sqlException) {
                             // Error 12: Database is off or Your connection is invalid!
                             JOptionPane.showMessageDialog(WplataFrame.this, "Error 12!");
                         }/** END QUERY **/
+
+
 
                         dispose();
                         MainFrame main = new MainFrame(client_nr);
