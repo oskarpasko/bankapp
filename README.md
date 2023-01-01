@@ -3,9 +3,9 @@ Banking application project for OOP classes at the University.
 
 # Table of contents
 1. [Errors](#Errors)
-  1. [Error 1](#Error-1)
-3. [Authors](#Authors)
-4. [License](#License)
+  - [Error 1](#Error-1)
+1. [Authors](#Authors)
+1. [License](#License)
 
 ## Errors
 List of errors which You can see in application.
