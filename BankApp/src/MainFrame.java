@@ -1,5 +1,7 @@
 import javax.swing.*;
+import javax.swing.border.CompoundBorder;
 import javax.swing.table.DefaultTableModel;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
@@ -18,15 +20,27 @@ public class MainFrame extends JFrame {
     private JButton wylogujButton;
     private JButton dodajButton;
     private JButton usunButton;
+    private JPanel welcomePanel;
+    private JPanel tabsPanel;
+    private JPanel buttonsPanel;
 
     // URL for connection with database
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
     public MainFrame(String client_number) {
         super("MainFrame");
+        StylesFunction();
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(700, 600);
+        this.setLayout(new BorderLayout(10,10));
+        panel1.add(welcomePanel,BorderLayout.NORTH);
+        panel1.add(tabsPanel,BorderLayout.CENTER);
+        panel1.add(buttonsPanel,BorderLayout.SOUTH);
+        this.pack();
+
+
+        /** center window **/
+        this.setLocationRelativeTo(null);
 
         DatabaseQueries(client_number);
 
@@ -216,5 +230,25 @@ public class MainFrame extends JFrame {
             // Error 12: Database is off or Your connection is invalid!
             JOptionPane.showMessageDialog(MainFrame.this, "Error 12!");
         }
+    }
+
+    private void StylesFunction() {
+        /** buttons style **/
+        wplataButton.setBackground(new Color(108, 220, 96));
+        wyplataButton.setBackground(new Color(108, 220, 96));
+        przelewButton.setBackground(new Color(108, 220, 96));
+
+        /** text field style **/
+        panel1.setBackground(new Color(42, 42, 42));
+        /** margin **/
+//        Border border = witajLabel.getBorder();
+//        Border margin = new EmptyBorder(0,100,100,100);
+//        witajLabel.setBorder(new CompoundBorder(border, margin));
+
+        panel1.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+////        welcomePanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+//        tabsPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+//        buttonsPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+
     }
 }
