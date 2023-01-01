@@ -13,7 +13,7 @@ public class WplataFrame extends JFrame {
     float value;
     int spinner;
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/BankApp";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
     public WplataFrame(String client_nr) {
         super("WplataFrame");
@@ -43,7 +43,7 @@ public class WplataFrame extends JFrame {
 
                             /** Query which return count of client's cards **/
                             PreparedStatement countRows = (PreparedStatement) connection
-                                    .prepareStatement("SELECT count(card_nr) as countRows FROM BankApp.Card WHERE client_nr =?");
+                                    .prepareStatement("SELECT count(card_nr) as countRows FROM bankapp.card WHERE client_nr =?");
 
                             countRows.setString(1, client_nr);
                             ResultSet countRowsResult = countRows.executeQuery();
@@ -55,14 +55,13 @@ public class WplataFrame extends JFrame {
 
                             String[] cards = new String[rows];
 
-                            /** Query which is getting number, type and balnce client's cards **/
+                            /** Query which is getting number client's cards **/
                             PreparedStatement cardInfo = (PreparedStatement) connection
-                                    .prepareStatement("SELECT card_nr FROM BankApp.Card WHERE client_nr =?;");
+                                    .prepareStatement("SELECT card_nr FROM bankapp.card WHERE client_nr =?;");
 
                             cardInfo.setString(1, client_nr);
                             ResultSet sumAllCardInfo = cardInfo.executeQuery();
 
-                            // mechanism to write all data from database to out variable "data", dirst rows then columns
                             for(int i=0;i<rows;i++) {
                                 if (sumAllCardInfo.next()) {
                                     String card_nr = sumAllCardInfo.getString("card_nr");
@@ -85,7 +84,7 @@ public class WplataFrame extends JFrame {
 
                             /** Query which is getting number, type and balnce client's cards **/
                             PreparedStatement updateBalance = (PreparedStatement) connection
-                                    .prepareStatement("UPDATE Card SET card_balance = card_balance + " + value + " WHERE card_nr = '1234567890123456';");
+                                    .prepareStatement("UPDATE card SET card_balance = card_balance + " + value + " WHERE card_nr = '1234567890123456';");
 
 //                            updateBalance.setString(1, nr_karty);
                             updateBalance.executeUpdate();

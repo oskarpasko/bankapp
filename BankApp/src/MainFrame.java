@@ -17,7 +17,7 @@ public class MainFrame extends JFrame {
     private JLabel saldoField;
 
     // URL for connection with database
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/BankApp";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
     public MainFrame(String client_number) {
         super("MainFrame");
@@ -64,7 +64,7 @@ public class MainFrame extends JFrame {
  */
             /** Query which is getting first name out client **/
             PreparedStatement st = (PreparedStatement) connection
-                    .prepareStatement("SELECT client_fname FROM BankApp.Client WHERE client_nr=?");
+                    .prepareStatement("SELECT client_fname FROM bankapp.client WHERE client_nr=?");
 
             st.setString(1, client_nr); // replacment first '?' in query by clinet number
             ResultSet rs = st.executeQuery();        // execute query
@@ -82,7 +82,7 @@ public class MainFrame extends JFrame {
 
             /** Query which gets client's all balance **/
             PreparedStatement sumBalance = (PreparedStatement) connection
-                    .prepareStatement("SELECT ROUND(SUM(card_balance), 2) AS balance FROM CARD WHERE client_nr=?");
+                    .prepareStatement("SELECT ROUND(SUM(card_balance), 2) AS balance FROM card WHERE client_nr=?");
 
             sumBalance.setString(1, client_nr);
             ResultSet sumBalanceResult = sumBalance.executeQuery();
@@ -101,7 +101,7 @@ public class MainFrame extends JFrame {
 
             /** Query which return count of client's cards **/
             PreparedStatement countRows = (PreparedStatement) connection
-                    .prepareStatement("SELECT count(card_nr) as countRows FROM BankApp.Card WHERE client_nr =?");
+                    .prepareStatement("SELECT count(card_nr) as countRows FROM bankapp.card WHERE client_nr =?");
 
             countRows.setString(1, client_nr);
             ResultSet countRowsResult = countRows.executeQuery();
@@ -113,7 +113,7 @@ public class MainFrame extends JFrame {
 
             /** Query which gets balance for our client's each card **/
             PreparedStatement allBalances = (PreparedStatement) connection
-                    .prepareStatement("SELECT card_nr, card_term_data, card_type, card_balance FROM BankApp.Card WHERE client_nr =?;");
+                    .prepareStatement("SELECT card_nr, card_term_data, card_type, card_balance FROM bankapp.card WHERE client_nr =?;");
 
             allBalances.setString(1, client_nr);
             ResultSet sumAllBalances = allBalances.executeQuery();
@@ -153,8 +153,8 @@ public class MainFrame extends JFrame {
             PreparedStatement countOverflowRows = (PreparedStatement) connection
                     .prepareStatement(
                             "SELECT COUNT(overflow_id)" +
-                                    "FROM BankApp.Overflow " +
-                                    "LEFT JOIN Card ON Overflow.overflow_send_number = Card.card_nr OR Overflow.overflow_recipent_number = Card.card_nr " +
+                                    "FROM bankapp.overflow " +
+                                    "LEFT JOIN Card ON overflow.overflow_send_number = card.card_nr OR overflow.overflow_recipent_number = card.card_nr " +
                                     "WHERE client_nr =?;");
 
             countOverflowRows.setString(1, client_nr);
@@ -167,8 +167,8 @@ public class MainFrame extends JFrame {
             /** Query which gets balance for our client's each card **/
             PreparedStatement allOverflows = (PreparedStatement) connection
                     .prepareStatement(
-                            "SELECT overflow_send_number, overflow_recipent_number, overflow_data, overflow_amount FROM BankApp.Overflow  " +
-                            "LEFT JOIN Card ON Overflow.overflow_send_number = Card.card_nr OR Overflow.overflow_recipent_number = Card.card_nr  " +
+                            "SELECT overflow_send_number, overflow_recipent_number, overflow_data, overflow_amount FROM bankapp.overflow  " +
+                            "LEFT JOIN card ON overflow.overflow_send_number = card.card_nr OR overflow.overflow_recipent_number = card.card_nr  " +
                             "WHERE client_nr =?");
 
             allOverflows.setString(1, client_nr);
