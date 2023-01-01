@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d7287cb-3616-4b9a-a4d2-fe5864942f27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AddCard.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AddCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RemoveCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoveCard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +45,8 @@
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "432",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/twork/Documents/Studia/2Rok/PO/Programy/Lab3Cw1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -106,6 +101,7 @@
       <updated>1672162589539</updated>
       <workItem from="1672221369348" duration="1038000" />
       <workItem from="1672600444584" duration="131000" />
+      <workItem from="1672610439893" duration="365000" />
     </task>
     <servers />
   </component>

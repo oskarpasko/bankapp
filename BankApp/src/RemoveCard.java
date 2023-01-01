@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.util.Arrays;
 
 public class RemoveCard extends JFrame {
     private JPanel panel1;
@@ -91,12 +92,14 @@ public class RemoveCard extends JFrame {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cardGetter();
+                String cardnumber = cardGetter();
+                System.out.println(cardnumber);
                 String[] choices = {"Tak", "Nie"};
                 if(balance==0) {
                     int input = JOptionPane.showOptionDialog(RemoveCard.this,"Czy jesteś pewny, że chcesz usunąć kartę?","Usuń kartę",0, JOptionPane.INFORMATION_MESSAGE, null, choices, null);
                     if(input==0) {
                         //TODO: baza
+                        System.out.println(Arrays.toString(nr_cards));
                         JOptionPane.showMessageDialog(RemoveCard.this,"Usunięto kartę!");
                     }else JOptionPane.showMessageDialog(RemoveCard.this,"Zrezygnowano z usunięcia karty!");
                 } else JOptionPane.showMessageDialog(RemoveCard.this,"Karta nie może posiadać środków!");
@@ -109,7 +112,7 @@ public class RemoveCard extends JFrame {
             }
         });
     }
-    public void cardGetter() {
+    public String cardGetter() {
         String nrCards = (String) cardsBox.getItemAt(cardsBox.getSelectedIndex());
         int r = 0;
         while(true) {
@@ -123,5 +126,6 @@ public class RemoveCard extends JFrame {
         String card_type = (String) cardData[r][1];
         typeLabel.setText(card_type);
         balanceLabel.setText(balance+"zł");
+        return nrCards;
     }
 }
