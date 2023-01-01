@@ -51,6 +51,14 @@ public class MainFrame extends JFrame {
                 wyplata.setVisible(true);
             }
         });
+        przelewButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                PrzelewyFrame przelewy = new PrzelewyFrame(client_number);
+                przelewy.setVisible(true);
+            }
+        });
     }
 
     private void DatabaseQueries(String client_nr)
