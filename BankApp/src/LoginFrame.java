@@ -45,35 +45,43 @@ public class LoginFrame extends JFrame {
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String client_nr = client_number.getText();
-                String client_pass = client_password.getText();
-
-                try {
-                    Connection connection = (Connection) DriverManager.getConnection(DB_URL,
-                            "root", "rootroot");
-
-                    PreparedStatement st = (PreparedStatement) connection
-                            .prepareStatement("SELECT client_nr FROM bankapp.client WHERE client_nr=? AND client_password=?");
-
-                    st.setString(1, client_nr);
-                    st.setString(2, client_pass);
-                    ResultSet rs = st.executeQuery();
-                    if (rs.next()) {
-                        // Działania po odnalezieniu usera z podanym loginem i hasłem
-                        MainFrame mainframe = new MainFrame(rs.getString("client_nr"));
-                        dispose();
-                        mainframe.setVisible(true);
-                    } else {
-                        JOptionPane.showMessageDialog(LoginFrame.this, "Wrong Username & Password");
-                    }
-                } catch (SQLException sqlException) {
-                    // Error 12: Database is off or Your connection is invalid!
-                    JOptionPane.showMessageDialog(LoginFrame.this, "Error 12!");
-                }
+                LoginQuery();
             }
         });
 
     }
+
+/**
+ * Function with mechanism to logging in
+ */
+    private void LoginQuery()
+    {
+        String client_nr = client_number.getText();
+        String client_pass = client_password.getText();
+
+        try {
+            Connection connection = (Connection) DriverManager.getConnection(DB_URL,
+                    "root", "rootroot");
+
+            PreparedStatement st = (PreparedStatement) connection
+                    .prepareStatement("SELECT client_nr FROM bankapp.client WHERE client_nr=? AND client_password=?");
+
+            st.setString(1, client_nr);
+            st.setString(2, client_pass);
+            ResultSet rs = st.executeQuery();
+            if (rs.next()) {
+                // Działania po odnalezieniu usera z podanym loginem i hasłem
+                MainFrame mainframe = new MainFrame(rs.getString("client_nr"));
+                dispose();
+                mainframe.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(LoginFrame.this, "Wrong Username & Password");
+            }
+        } catch (SQLException sqlException) {
+            // Error 12: Database is off or Your connection is invalid!
+            JOptionPane.showMessageDialog(LoginFrame.this, "Error 12!");
+        }
+    }/** END FUNCTION **/
 
     private void StylesFunction() {
         /** login button style **/
