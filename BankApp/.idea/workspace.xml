@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4db62497-e7f5-4e2c-ab4a-2b45dae142f7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/WplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WplataFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WyplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WyplataFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WplataFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/WplataFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/WyplataFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
   <component name="RunManager" selected="Application.LoginFrame">
     <configuration name="LoginFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LoginFrame" />
