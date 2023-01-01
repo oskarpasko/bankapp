@@ -3,7 +3,7 @@ Banking application project for OOP classes at the University.
 
 # Table of contents
 1. [Errors](#Errors)
-- &emsp; [Error 1](#Error-1)
+&emsp; - [Error 1](#Error-1)
 2. [Authors](#Authors)
 2. [License](#License)
 
