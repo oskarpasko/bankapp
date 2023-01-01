@@ -1,4 +1,8 @@
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
@@ -8,6 +12,10 @@ public class LoginFrame extends JFrame {
     private JTextField client_number;
     private JPasswordField client_password;
     private JButton loginButton;
+    private JLabel witajLabel;
+    private JLabel klientLabel;
+    private JPanel panelLogin;
+    private JLabel passLabel;
 
     // URL for connection with database
     private static final String DB_URL = "jdbc:mysql://localhost:3306/BankApp";
@@ -19,10 +27,21 @@ public class LoginFrame extends JFrame {
 
     public LoginFrame() {
         super("LoginFrame");
+        StylesFunction();
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(700, 600);
+        this.pack();
+        this.setLayout(null);
 
+        /** center window **/
+        int width_window = this.getWidth()/2;
+        int height_window = this.getHeight()/2;
+        Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
+        int width = (int)size.getWidth();
+        int height = (int)size.getHeight();
+        this.setLocation((width/2)-width_window,(height/2)-height_window);
+
+        /** Login Listener **/
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -53,5 +72,24 @@ public class LoginFrame extends JFrame {
                 }
             }
         });
+
     }
+
+    private void StylesFunction() {
+        /** login button style **/
+        loginButton.setBackground(new Color(108, 220, 96));
+        loginButton.setPreferredSize(new Dimension(200,10));
+        /** text field style **/
+        panel1.setBackground(new Color(42, 42, 42));
+        panelLogin.setBackground(new Color(42, 42, 42));
+        /** font colors **/
+        witajLabel.setForeground(new Color(108, 220, 96));
+        klientLabel.setForeground(new Color(255, 255, 255));
+        passLabel.setForeground(new Color(255, 255, 255));
+        /** margin **/
+        Border border = witajLabel.getBorder();
+        Border margin = new EmptyBorder(0,100,100,100);
+        witajLabel.setBorder(new CompoundBorder(border, margin));
+    }
+
 }
