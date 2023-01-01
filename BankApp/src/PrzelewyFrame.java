@@ -31,10 +31,10 @@ public class PrzelewyFrame extends JFrame {
                 main.setVisible(true);
             }
         });
-        /**
-         * Download cards data QUERY
-         *
-         */
+/**
+ * Download cards data QUERY
+ *
+ */
         Object[][] cardData = new Object[0][];
         int rows = 0;
         try {
