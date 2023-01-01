@@ -45,8 +45,8 @@ You should check data in Your Database.
 
 ## Authors
 
-- [@oskarpasko](https://www.github.com/oskarpasko)
 - [@eltwor](https://www.github.com/eltwor)
+- [@oskarpasko](https://www.github.com/oskarpasko)
 
 ## Technicals
 Version: 1.0 </br>
