@@ -78,6 +78,14 @@ public class MainFrame extends JFrame {
                 addCard.setVisible(true);
             }
         });
+        usunButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                RemoveCard removeCard = new RemoveCard(client_number);
+                removeCard.setVisible(true);
+            }
+        });
     }
 
     private void DatabaseQueries(String client_nr)
