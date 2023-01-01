@@ -7,6 +7,7 @@ Banking application project for OOP classes at the University.
 - [Error 12](#Error-12)
 - [Error 123](#Error-123)
 2. [Authors](#Authors)
+2. [Technicals](#Technicals)
 2. [License](#License)
 
 ## Errors
@@ -46,6 +47,11 @@ You should check data in Your Database.
 
 - [@oskarpasko](https://www.github.com/oskarpasko)
 - [@eltwor](https://www.github.com/eltwor)
+
+## Technicals
+Version: 1.0 <\br>
+Language: Java <\br>
+SDK: 18.0.2 <\br>
 
 ## License
 
