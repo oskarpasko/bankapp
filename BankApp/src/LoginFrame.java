@@ -84,16 +84,20 @@ public class LoginFrame extends JFrame {
     }/** END FUNCTION **/
 
     private void StylesFunction() {
+        Color main_green = new Color(108, 220, 96);
+        Color foreground_white = new Color(222, 222, 222);
+        Color dark_gray = new Color(42, 42, 42);
+        
         /** login button style **/
-        loginButton.setBackground(new Color(108, 220, 96));
+        loginButton.setBackground(main_green);
         loginButton.setPreferredSize(new Dimension(200,10));
         /** text field style **/
-        panel1.setBackground(new Color(42, 42, 42));
-        panelLogin.setBackground(new Color(42, 42, 42));
+        panel1.setBackground(dark_gray);
+        panelLogin.setBackground(dark_gray);
         /** font colors **/
-        witajLabel.setForeground(new Color(108, 220, 96));
-        klientLabel.setForeground(new Color(255, 255, 255));
-        passLabel.setForeground(new Color(255, 255, 255));
+        witajLabel.setForeground(main_green);
+        klientLabel.setForeground(foreground_white);
+        passLabel.setForeground(foreground_white);
         /** margin **/
 //        Border border = witajLabel.getBorder();
 //        Border margin = new EmptyBorder(0,100,100,100);
