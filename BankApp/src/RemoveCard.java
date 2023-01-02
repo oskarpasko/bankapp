@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
@@ -11,6 +12,11 @@ public class RemoveCard extends JFrame {
     private JButton OKButton;
     private JLabel typeLabel;
     private JLabel balanceLabel;
+    private JPanel mainPanel;
+    private JPanel formPanel;
+    private JLabel kartaLabel;
+    private JLabel typLabel;
+    private JLabel saldoLabel;
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
     int rows = 0;
     Object[][] cardData = new Object[0][];
@@ -19,8 +25,10 @@ public class RemoveCard extends JFrame {
         super("Remove Card");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(700, 600);
-        /** center window **/
+        StylesFunction();
+        this.setLayout(new GridLayout());
+        this.pack();
+        this.setMinimumSize(new Dimension(600,400));
         this.setLocationRelativeTo(null);
 
         /**
@@ -133,6 +141,34 @@ public class RemoveCard extends JFrame {
             }
         });
     }
+
+    private void StylesFunction() {
+        Color main_green = new Color(108, 220, 96);
+        Color foreground_white = new Color(222, 222, 222);
+        Color dark_gray = new Color(42, 42, 42);
+        Color button_green = new Color(129, 161, 125);
+
+        /** background setter **/
+        panel1.setBackground(dark_gray);
+        mainPanel.setBackground(dark_gray);
+        formPanel.setBackground(dark_gray);
+
+        /** foreground setter **/
+        kartaLabel.setForeground(foreground_white);
+        typLabel.setForeground(foreground_white);
+        saldoLabel.setForeground(foreground_white);
+        typeLabel.setForeground(foreground_white);
+        balanceLabel.setForeground(foreground_white);
+
+        /** buttons **/
+        OKButton.setBackground(main_green);
+        OKButton.setForeground(dark_gray);
+        backButton.setBackground(button_green);
+        backButton.setForeground(foreground_white);
+        /** margins **/
+        panel1.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+    }
+
     public String cardGetter() {
         String nrCards = (String) cardsBox.getItemAt(cardsBox.getSelectedIndex());
         int r = 0;

@@ -73,7 +73,7 @@ public class MainFrame extends JFrame {
         this.setLocationRelativeTo(null);
         DatabaseQueries(client_number);
 
-        wyjdzButton.addActionListener(new ActionListener() {
+        wylogujButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
@@ -81,6 +81,8 @@ public class MainFrame extends JFrame {
                 login.setVisible(true);
             }
         });
+
+
         wplataButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -119,6 +121,12 @@ public class MainFrame extends JFrame {
                 dispose();
                 RemoveCard removeCard = new RemoveCard(client_number);
                 removeCard.setVisible(true);
+            }
+        });
+        wyjdzButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
     }
