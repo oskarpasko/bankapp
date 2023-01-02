@@ -50,8 +50,10 @@ You should check data in Your Database.
 
 ## Technicals
 Version: 1.0 </br>
-Language: Java </br>
+Languages: Java, MySQL </br>
+Software environment: IntelliJ IDEA, MySQL Workbench </br>
 SDK: 18.0.2 </br>
+Operating Systems: Windows, macOS </br>
 
 ## License
 
