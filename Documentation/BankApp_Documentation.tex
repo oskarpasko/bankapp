@@ -45,27 +45,45 @@
 \begin{document}
 \newpage
 
+%--------------------------------------------------------------------------------------------------
+%      SPIS TREŚCI
+%--------------------------------------------------------------------------------------------------
 \tableofcontents
 
 \newpage
 
-\section{Image}
+%--------------------------------------------------------------------------------------------------
+%      OPIS ZAŁOŻEŃ
+%--------------------------------------------------------------------------------------------------
+\section{Opis założeń projektu}
 
+\quad Użytkownik, który posiada konto w bazie danych może się zalogować do aplikacji za pomocą swojego numeru klienta oraz hasła. Na głównej stronie aplikacji użytkownik może sprawdzić swojego aktualne saldo, na które składają sie salda wszystkich jego kart posiadanych w banku. Tabela ze wszystkimi kartami widoczna jest w centralnym punkcie strony głównej. Dodatkowo na stronie głównej użytkownik może sprawdzić swoją historię przelewów jakich dokonał. Klient może dokonać wpłaty na wybraną przez siebie kartę oraz wypłaty przez wybraną karte z założeniem, że posiada on wystarczająco środków na karcie. Możliwe jest również dokonanie przelewów z założeniami podobnymi do wyboru pieniędzy. Użytkownik ponad to może dodać nową kartę płatniczą lub usunąć isniejącą karte płatniczą zakładająć, że jej bilans wynosi 0zł.
 
-\section{lists}
+%--------------------------------------------------------------------------------------------------
+%      SPECYFIKACJA WYMAGAŃ
+%--------------------------------------------------------------------------------------------------
+\section{Specyfikacja wymagań}
 
-\subsection{Lista kropkowana}
+\subsection{Wymagania funkcjonalne}
 \begin{itemize}
-\item Pierwszy item
-\item Drugi item
-\item Lubię szybką grę
+\item Bank oferuje usługi użytkownikom zarejestrowanym do aplikacji.
+\item Bank oferuje możliwość zarejestrowania się nowym użytkownikom.
+\item Klient może wpłacić lub wypłacić pieniądze z wybranej karty.
+\item Klient może dokonać przelewu na wybraną kartę.
+\item Klient może sprawdzić stan swoich kart płatniczych.
+\item Klient może sprawdzić historię swoich przelewów.
+\item Zarejestrowany klient może dodać nową kartę platniczą do swojego konta.
 \end{itemize}
 
-\subsection{Lista numerowana}
-\begin{enumerate}
-\item Pierwszy item
-\item Drugi item
-\end{enumerate}
+\newpage
+
+\subsection{Wymagania niefunkcjonalne}
+\begin{itemize}
+\item Możliwość dodawania, usuwania, oraz edycji rekordów w bazie podczas działania aplikacji.
+\item Aplikacja jest przyjazna dla klienta i jego rodziny, oraz jest prosta w użyciu.
+\item Aplikacja tworzona jest w języku Java.
+\item Aplikacja nawiązuje połączenie z bazą danych w języku MySQL i używa rekordów w niej zapisanych.
+\end{itemize}
 
 \section{Tabela}
 
