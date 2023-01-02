@@ -3,4 +3,5 @@
 \contentsline {section}{\numberline {2}Specyfikacja wymagań}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Wymagania funkcjonalne}{2}{}%
 \contentsline {subsection}{\numberline {2.2}Wymagania niefunkcjonalne}{3}{}%
-\contentsline {section}{\numberline {3}Tabela}{3}{}%
+\contentsline {section}{\numberline {3}Opis techniczny projektu}{3}{}%
+\contentsline {section}{\numberline {4}Tabela}{3}{}%
