@@ -344,4 +344,6 @@ public class MainFrame extends JFrame {
         panel1.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
 
     }
+
+
 }
