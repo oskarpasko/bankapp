@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d7287cb-3616-4b9a-a4d2-fe5864942f27" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/PrzelewyFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrzelewyFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrzelewyFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PrzelewyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrzelewyFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +108,7 @@
       <workItem from="1672221369348" duration="1038000" />
       <workItem from="1672600444584" duration="131000" />
       <workItem from="1672610439893" duration="365000" />
+      <workItem from="1672667079040" duration="629000" />
     </task>
     <servers />
   </component>

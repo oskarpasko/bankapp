@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
@@ -10,6 +11,11 @@ public class WplataFrame extends JFrame {
     private JButton OKButton;
     private JComboBox comboCards;
     private JButton backButton;
+    private JPanel mainPanel;
+    private JPanel formPanel;
+    private JLabel KwotaLabel;
+    private JLabel IloscLabel;
+    private JLabel KartaLabel;
     float value;
     int spinner;
 
@@ -18,9 +24,12 @@ public class WplataFrame extends JFrame {
     public WplataFrame(String client_nr) {
         super("WplataFrame");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
+        StylesFunction();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(700, 600);
-
+        this.setLayout(new GridLayout());
+        this.pack();
+        this.setMinimumSize(new Dimension(600,400));
+        this.setLocationRelativeTo(null);
 /**
  * Download cards data QUERY
  *
@@ -113,5 +122,31 @@ public class WplataFrame extends JFrame {
                 main.setVisible(true);
             }
         });
+    }
+
+    private void StylesFunction() {
+        Color main_green = new Color(108, 220, 96);
+        Color foreground_white = new Color(222, 222, 222);
+        Color dark_gray = new Color(42, 42, 42);
+        Color button_green = new Color(129, 161, 125);
+
+        /** background setter **/
+        panel1.setBackground(dark_gray);
+        mainPanel.setBackground(dark_gray);
+        formPanel.setBackground(dark_gray);
+
+        /** foreground setter **/
+        KartaLabel.setForeground(foreground_white);
+        KwotaLabel.setForeground(foreground_white);
+        IloscLabel.setForeground(foreground_white);
+
+        /** buttons **/
+        OKButton.setBackground(main_green);
+        OKButton.setForeground(dark_gray);
+        backButton.setBackground(button_green);
+        backButton.setForeground(foreground_white);
+
+        /** margins **/
+        panel1.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
     }
 }

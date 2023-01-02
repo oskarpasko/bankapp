@@ -28,7 +28,6 @@ public class MainFrame extends JFrame {
     private JLabel kartyLabel;
     private JLabel historiaLabel;
     private JScrollPane historiaScroll;
-    private JPanel logoutButtons;
 
     // URL for connection with database
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
@@ -298,6 +297,8 @@ public class MainFrame extends JFrame {
         /** background style **/
         panel1.setBackground(dark_gray);
         tabsPanel.setBackground(dark_gray);
+        saldoField.setBackground(dark_gray);
+        nameField.setBackground(dark_gray);
         buttonsPanel.setBackground(dark_gray);
         tabbedPane1.setBackground(light_gray);
         kartyPanel.setBackground(light_gray);
