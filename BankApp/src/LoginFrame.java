@@ -1,7 +1,4 @@
 import javax.swing.*;
-import javax.swing.border.Border;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +13,8 @@ public class LoginFrame extends JFrame {
     private JLabel klientLabel;
     private JPanel panelLogin;
     private JLabel passLabel;
+    private JButton newUserButton;
+    private JPanel buttonsPanel;
 
     // URL for connection with database
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
@@ -34,12 +33,6 @@ public class LoginFrame extends JFrame {
         this.pack();
         /** center window **/
         this.setLocationRelativeTo(null);
-//        int width_window = this.getWidth()/2;
-//        int height_window = this.getHeight()/2;
-//        Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
-//        int width = (int)size.getWidth();
-//        int height = (int)size.getHeight();
-//        this.setLocation((width/2)-width_window,(height/2)-height_window);
 
         /** Login Listener **/
         loginButton.addActionListener(new ActionListener() {
@@ -49,6 +42,14 @@ public class LoginFrame extends JFrame {
             }
         });
 
+        newUserButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                NewUser newUser = new NewUser();
+                newUser.setVisible(true);
+            }
+        });
     }
 
 /**
@@ -90,10 +91,13 @@ public class LoginFrame extends JFrame {
         
         /** login button style **/
         loginButton.setBackground(main_green);
-        loginButton.setPreferredSize(new Dimension(200,10));
+        newUserButton.setBackground(main_green);
+
         /** text field style **/
         panel1.setBackground(dark_gray);
         panelLogin.setBackground(dark_gray);
+        buttonsPanel.setBackground(dark_gray);
+
         /** font colors **/
         witajLabel.setForeground(main_green);
         klientLabel.setForeground(foreground_white);
