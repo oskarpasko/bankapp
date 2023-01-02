@@ -1,0 +1,53 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+
+\graphicspath{{images/}}
+
+\title{My First Document}
+\author{Oskar Paśko}
+\date{Listopad 2021}
+
+\begin{document}
+\maketitle
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Image}
+
+\includegraphics[scale=0.2]{ur_logo}
+
+\section{lists}
+
+\subsection{Lista kropkowana}
+\begin{itemize}
+\item Pierwszy item
+\item Drugi item
+\item Lubię szybką grę
+\end{itemize}
+
+\subsection{Lista numerowana}
+\begin{enumerate}
+\item Pierwszy item
+\item Drugi item
+\end{enumerate}
+
+\section{Tabela}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+cell1 & cell2 & cell3 \\
+cell4 & cell5 & cell6 \\
+cell7 & cell8 & cell9 \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\end{document}
