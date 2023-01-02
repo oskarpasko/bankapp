@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.time.LocalDate;
 
 public class PrzelewyFrame extends JFrame {
     private JPanel panel1;
@@ -147,6 +148,17 @@ public class PrzelewyFrame extends JFrame {
 
                                             updateRecipientBalance.setString(1, nr_odbiorca);
                                             updateRecipientBalance.executeUpdate();
+
+                                            /** Query which is inserting new overflow **/
+                                            PreparedStatement insertOverflow = (PreparedStatement) connection
+                                                    .prepareStatement("INSERT INTO overflow values(null, ?, ?, ?, ?);");
+
+                                            insertOverflow.setString(1, card_nr);
+                                            insertOverflow.setString(2, nr_odbiorca);
+                                            insertOverflow.setString(3, String.valueOf(LocalDate.now()));
+                                            insertOverflow.setString(4, String.valueOf(value));
+
+                                            insertOverflow.executeUpdate();
                                         }
                                     }
 
