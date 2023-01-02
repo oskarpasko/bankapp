@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
@@ -15,6 +16,12 @@ public class WyplataFrame extends JFrame {
     private JRadioButton wlasnaRadio;
     private JTextField wlasnaText;
     private JComboBox cardsBox;
+    private JPanel mainPanel;
+    private JPanel formPanel;
+    private JLabel KartaLabel;
+    private JLabel KwotaLabel;
+    private JPanel kartaPanel;
+    private JPanel wartoscPanel;
     private int value;
 
     // URL for connection with database
@@ -24,7 +31,12 @@ public class WyplataFrame extends JFrame {
         super("WyplataFrame");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(700, 600);
+        StylesFunction();
+        this.setLayout(new GridLayout());
+        this.pack();
+        this.setMinimumSize(new Dimension(600,400));
+        this.setLocationRelativeTo(null);
+
         ButtonGroup bg = new ButtonGroup();
         bg.add(a50RadioButton);
         bg.add(a100RadioButton);
@@ -208,5 +220,44 @@ public class WyplataFrame extends JFrame {
                 main.setVisible(true);
             }
         });
+    }
+
+    private void StylesFunction() {
+        Color main_green = new Color(108, 220, 96);
+        Color foreground_white = new Color(222, 222, 222);
+        Color dark_gray = new Color(42, 42, 42);
+        Color button_green = new Color(129, 161, 125);
+
+        /** background setter **/
+        panel1.setBackground(dark_gray);
+        mainPanel.setBackground(dark_gray);
+        formPanel.setBackground(dark_gray);
+        kartaPanel.setBackground(dark_gray);
+        wartoscPanel.setBackground(dark_gray);
+        a50RadioButton.setBackground(dark_gray);
+        a100RadioButton.setBackground(dark_gray);
+        a200RadioButton.setBackground(dark_gray);
+        a300RadioButton.setBackground(dark_gray);
+        a500RadioButton.setBackground(dark_gray);
+        wlasnaRadio.setBackground(dark_gray);
+
+        /** foreground setter **/
+        KartaLabel.setForeground(foreground_white);
+        KwotaLabel.setForeground(foreground_white);
+        a50RadioButton.setForeground(foreground_white);
+        a100RadioButton.setForeground(foreground_white);
+        a200RadioButton.setForeground(foreground_white);
+        a300RadioButton.setForeground(foreground_white);
+        a500RadioButton.setForeground(foreground_white);
+        wlasnaRadio.setForeground(foreground_white);
+
+        /** buttons **/
+        OKButton.setBackground(main_green);
+        OKButton.setForeground(dark_gray);
+        backButton.setBackground(button_green);
+        backButton.setForeground(foreground_white);
+
+        /** margins **/
+        panel1.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
     }
 }
