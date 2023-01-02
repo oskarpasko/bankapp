@@ -2,6 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.regex.Pattern;
 
 public class NewUser extends JFrame {
@@ -19,6 +23,8 @@ public class NewUser extends JFrame {
     private JLabel nameLabel;
     private JLabel surnameLabel;
     private JLabel passLabel;
+
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
     public NewUser() {
         super("Register new User");
@@ -63,7 +69,30 @@ public class NewUser extends JFrame {
                             name = name.substring(0, 1).toUpperCase() + name.substring(1);
                             surname = surname.substring(0, 1).toUpperCase() + surname.substring(1);
 
-                            //TODO: baza
+/**
+ * INSERT USER QUERY
+ *
+ */
+                            try {
+                                Connection connection = (Connection) DriverManager.getConnection(DB_URL,
+                                        "root", "rootroot");
+
+                                /** Query which is updating balance on card adding value **/
+                                PreparedStatement insertUser = (PreparedStatement) connection
+                                        .prepareStatement("INSERT INTO client values(?, ?, ?, ?);");
+
+                                insertUser.setString(1, nr_klient);
+                                insertUser.setString(2, password);
+                                insertUser.setString(3, name);
+                                insertUser.setString(4, surname);
+
+                                insertUser.executeUpdate();
+
+                            } catch (SQLException sqlException) {
+                                // Error 12: Database is off or Your connection is invalid!
+                                JOptionPane.showMessageDialog(NewUser.this, "Error 12!");
+                            }/** END QUERY **/
+
                             JOptionPane.showMessageDialog(NewUser.this,"Poszło!" +
                                     "\nImie: "+name+"\nNazwisko: "+surname+"\nHasło"+password+"\n nr_klienta:"+nr_klient);
                         }
