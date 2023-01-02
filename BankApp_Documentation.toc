@@ -1,6 +1,0 @@
-\babel@toc {polish}{}\relax 
-\contentsline {section}{\numberline {1}Image}{3}{}%
-\contentsline {section}{\numberline {2}lists}{3}{}%
-\contentsline {subsection}{\numberline {2.1}Lista kropkowana}{3}{}%
-\contentsline {subsection}{\numberline {2.2}Lista numerowana}{3}{}%
-\contentsline {section}{\numberline {3}Tabela}{3}{}%
