@@ -15,6 +15,20 @@ List of errors which You can see in application.
 
 ### Error 1
 This error is showing when application have problem with connection during log in to app. </br>
+
+Download and add JDBC connector to project. </br>
+Download MySQL connector from [here!](https://dev.mysql.com/downloads/connector/j/)</br>
+
+Adding MySQL connector: </br>
+
+```bash
+  File -> Project Structure -> Modules
+```
+Click on '+' button. Then choose JAR option and then choose mysql-connector file from folder where You downloaded. </br>
+After that check connector in box and click 'Apply'. </br>
+
+If Your problem is not solved try to next step below. </br>
+
 Check if Your database is online or if Your connection is invalid! </br>
 To check connection you should have login and password to database and URL. </br>
 </br>
