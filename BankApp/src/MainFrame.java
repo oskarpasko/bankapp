@@ -20,9 +20,14 @@ public class MainFrame extends JFrame {
     private JButton wylogujButton;
     private JButton dodajButton;
     private JButton usunButton;
-    private JPanel welcomePanel;
     private JPanel tabsPanel;
     private JPanel buttonsPanel;
+    private JPanel kartyPanel;
+    private JPanel historiaPanel;
+    private JScrollPane kartyScroll;
+    private JLabel kartyLabel;
+    private JLabel historiaLabel;
+    private JScrollPane historiaScroll;
     private JPanel logoutButtons;
 
     // URL for connection with database
@@ -33,8 +38,39 @@ public class MainFrame extends JFrame {
         StylesFunction();
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(700,600);
+//        this.setSize(700,600);
+        this.setLayout(new GridBagLayout());
+
+        GridBagConstraints c = new GridBagConstraints();
+        c.insets = new Insets(0,5,10,5);
+        c.weightx = 0.5;
+        c.fill = GridBagConstraints.HORIZONTAL;
+        c.gridx = 0;
+        c.gridy = 0;
+        panel1.add(nameField,c);
+        c.gridx = 1;
+        panel1.add(saldoField,c);
+        c.gridx = 2;
+        panel1.add(wylogujButton,c);
+        c.gridx = 3;
+        panel1.add(wyjdzButton,c);
+        c.gridy = 1;
+        c.weightx = 1;
+        c.weighty = 1;
+        c.gridwidth = 4;
+        c.gridx = 0;
+        panel1.add(tabsPanel,c);
+        c.gridy = 2;
+        c.gridx = 0;
+        panel1.add(buttonsPanel,c);
+
         /** center window **/
+        this.pack();
+
+
+//
+//        panel1.setMinimumSize(new Dimension(1700,500));
+//        panel1.setPreferredSize(new Dimension(1700,500));
         this.setLocationRelativeTo(null);
         DatabaseQueries(client_number);
 
@@ -243,22 +279,60 @@ public class MainFrame extends JFrame {
     }
 
     private void StylesFunction() {
+        Color main_green = new Color(108, 220, 96);
+        Color foreground_white = new Color(222, 222, 222);
+        Color dark_gray = new Color(42, 42, 42);
+        Color light_gray = new Color(63, 63, 63);
+        Color button_gray = new Color(152, 152, 152);
+        Color button_green = new Color(129, 161, 125);
+
         /** buttons style **/
-        wplataButton.setBackground(new Color(108, 220, 96));
-        wyplataButton.setBackground(new Color(108, 220, 96));
-        przelewButton.setBackground(new Color(108, 220, 96));
+        wplataButton.setBackground(main_green);
+        wyplataButton.setBackground(main_green);
+        przelewButton.setBackground(main_green);
+        wyjdzButton.setBackground(button_gray);
+        wylogujButton.setBackground(button_gray);
+        dodajButton.setBackground(button_green);
+        usunButton.setBackground(button_green);
 
-        /** text field style **/
-        panel1.setBackground(new Color(42, 42, 42));
+        /** background style **/
+        panel1.setBackground(dark_gray);
+        tabsPanel.setBackground(dark_gray);
+        buttonsPanel.setBackground(dark_gray);
+        tabbedPane1.setBackground(light_gray);
+        kartyPanel.setBackground(light_gray);
+        historiaPanel.setBackground(light_gray);
+        kartyScroll.getViewport().setBackground(light_gray);
+        kartyTable.setBackground(light_gray);
+        kartyScroll.setBackground(light_gray);
+        kartyTable.getTableHeader().setBackground(light_gray);
+        historiaScroll.getViewport().setBackground(light_gray);
+        historiaTable.setBackground(light_gray);
+        historiaScroll.setBackground(light_gray);
+        historiaTable.getTableHeader().setBackground(light_gray);
+        
+        /** selection **/
+        kartyTable.setSelectionBackground(main_green);
+        kartyTable.setSelectionForeground(light_gray);
+        historiaTable.setSelectionBackground(main_green);
+        historiaTable.setSelectionForeground(light_gray);
+        /** labels **/
+        nameField.setForeground(main_green);
+        saldoField.setForeground(foreground_white);
+        tabbedPane1.setForeground(main_green);
+        kartyTable.setForeground(foreground_white);
+        kartyPanel.setForeground(foreground_white);
+        kartyScroll.setForeground(foreground_white);
+        kartyLabel.setForeground(foreground_white);
+        historiaLabel.setForeground(foreground_white);
+        kartyTable.getTableHeader().setForeground(foreground_white);
+
+        historiaTable.setForeground(foreground_white);
+        historiaScroll.setForeground(foreground_white);
+        historiaTable.getTableHeader().setForeground(foreground_white);
+        historiaPanel.setForeground(foreground_white);
         /** margin **/
-//        Border border = witajLabel.getBorder();
-//        Border margin = new EmptyBorder(0,100,100,100);
-//        witajLabel.setBorder(new CompoundBorder(border, margin));
-
         panel1.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
-////        welcomePanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
-//        tabsPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
-//        buttonsPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
 
     }
 }
