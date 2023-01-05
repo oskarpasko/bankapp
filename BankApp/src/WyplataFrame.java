@@ -3,9 +3,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public class WyplataFrame extends JFrame {
     private JPanel panel1;
@@ -226,32 +223,39 @@ public class WyplataFrame extends JFrame {
     }
 
     private void StylesFunction() {
-        Map<String, Color> colors = new HashMap<>();
-        colors.put("main_green", new Color(108, 220, 96));
-        colors.put("foreground_white", new Color(222, 222, 222));
-        colors.put("dark_gray", new Color(42, 42, 42));
-        colors.put("button_green", new Color(129, 161, 125));
+        Color main_green = new Color(108, 220, 96);
+        Color foreground_white = new Color(222, 222, 222);
+        Color dark_gray = new Color(42, 42, 42);
+        Color button_green = new Color(129, 161, 125);
 
-        /** setting the background of panels **/
-        for (JPanel panel : Arrays.asList(panel1, mainPanel, formPanel,kartaPanel,wartoscPanel)) {
-            panel.setBackground(colors.get("dark_gray"));
-        }
-        for (JRadioButton radio : Arrays.asList(a50RadioButton,a100RadioButton,a200RadioButton,a300RadioButton,a500RadioButton,wlasnaRadio)) {
-            radio.setBackground(colors.get("dark_gray"));
-            radio.setForeground(colors.get("foreground_white"));
-        }
+        /** background setter **/
+        panel1.setBackground(dark_gray);
+        mainPanel.setBackground(dark_gray);
+        formPanel.setBackground(dark_gray);
+        kartaPanel.setBackground(dark_gray);
+        wartoscPanel.setBackground(dark_gray);
+        a50RadioButton.setBackground(dark_gray);
+        a100RadioButton.setBackground(dark_gray);
+        a200RadioButton.setBackground(dark_gray);
+        a300RadioButton.setBackground(dark_gray);
+        a500RadioButton.setBackground(dark_gray);
+        wlasnaRadio.setBackground(dark_gray);
 
         /** foreground setter **/
-        /** setting the font color of labels **/
-        for (JLabel label : Arrays.asList(KartaLabel,KwotaLabel)) {
-            label.setForeground(colors.get("foreground_white"));
-        }
+        KartaLabel.setForeground(foreground_white);
+        KwotaLabel.setForeground(foreground_white);
+        a50RadioButton.setForeground(foreground_white);
+        a100RadioButton.setForeground(foreground_white);
+        a200RadioButton.setForeground(foreground_white);
+        a300RadioButton.setForeground(foreground_white);
+        a500RadioButton.setForeground(foreground_white);
+        wlasnaRadio.setForeground(foreground_white);
 
         /** buttons **/
-        OKButton.setBackground(colors.get("main_green"));
-        OKButton.setForeground(colors.get("dark_gray"));
-        backButton.setBackground(colors.get("button_green"));
-        backButton.setForeground(colors.get("foreground_white"));
+        OKButton.setBackground(main_green);
+        OKButton.setForeground(dark_gray);
+        backButton.setBackground(button_green);
+        backButton.setForeground(foreground_white);
 
         /** margins **/
         panel1.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));

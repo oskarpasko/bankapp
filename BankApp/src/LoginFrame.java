@@ -3,9 +3,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public class LoginFrame extends JFrame {
     private JPanel panel1;
@@ -88,32 +85,27 @@ public class LoginFrame extends JFrame {
     }/** END FUNCTION **/
 
     private void StylesFunction() {
-        /** custom colors **/
-        Map<String, Color> colors = new HashMap<>();
-        colors.put("main_green", new Color(108, 220, 96));
-        colors.put("foreground_white", new Color(222, 222, 222));
-        colors.put("dark_gray", new Color(42, 42, 42));
-        colors.put("light_gray", new Color(63, 63, 63));
-        colors.put("button_gray", new Color(152, 152, 152));
-        colors.put("button_green", new Color(129, 161, 125));
+        Color main_green = new Color(108, 220, 96);
+        Color foreground_white = new Color(222, 222, 222);
+        Color dark_gray = new Color(42, 42, 42);
+        
+        /** login button style **/
+        loginButton.setBackground(main_green);
+        newUserButton.setBackground(main_green);
 
-        /** setting the background, and font color for the buttons **/
-        for (JButton button : Arrays.asList(loginButton,newUserButton)) {
-            button.setBackground(colors.get("main_green"));
-            button.setForeground(colors.get("dark_gray"));
-        }
+        /** text field style **/
+        panel1.setBackground(dark_gray);
+        panelLogin.setBackground(dark_gray);
+        buttonsPanel.setBackground(dark_gray);
 
-        /** setting the background for all the panels **/
-        for (JPanel panel : Arrays.asList(panel1, panelLogin, buttonsPanel)) {
-            panel.setBackground(colors.get("dark_gray"));
-        }
         /** font colors **/
-        for (JLabel label : Arrays.asList(klientLabel,passLabel)) {
-            label.setForeground(colors.get("foreground_white"));
-        }
-        witajLabel.setForeground(colors.get("main_green"));
-
+        witajLabel.setForeground(main_green);
+        klientLabel.setForeground(foreground_white);
+        passLabel.setForeground(foreground_white);
         /** margin **/
+//        Border border = witajLabel.getBorder();
+//        Border margin = new EmptyBorder(0,100,100,100);
+//        witajLabel.setBorder(new CompoundBorder(border, margin));
         panelLogin.setBorder(BorderFactory.createEmptyBorder(40,40,40,40));
     }
 
