@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1d7287cb-3616-4b9a-a4d2-fe5864942f27" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddCard.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddCard.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RemoveCard.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoveCard.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RemoveCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoveCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WyplataFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/WyplataFrame.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WyplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WyplataFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +103,7 @@
       <workItem from="1672600444584" duration="131000" />
       <workItem from="1672610439893" duration="365000" />
       <workItem from="1672667079040" duration="1852000" />
+      <workItem from="1672876110875" duration="2504000" />
     </task>
     <servers />
   </component>
