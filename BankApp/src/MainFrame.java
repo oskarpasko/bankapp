@@ -346,15 +346,17 @@ public class MainFrame extends JFrame {
         colors.put("foreground_white", new Color(222, 222, 222));
         colors.put("dark_gray", new Color(42, 42, 42));
         colors.put("light_gray", new Color(63, 63, 63));
-        colors.put("button_gray", new Color(152, 152, 152));
         colors.put("button_green", new Color(129, 161, 125));
 
 // Set the background and foreground colors for all buttons
-        for (JButton button : Arrays.asList(wplataButton, wyplataButton, przelewButton, wyjdzButton, wylogujButton, dodajButton, usunButton)) {
+        for (JButton button : Arrays.asList(wplataButton, wyplataButton, przelewButton, dodajButton, usunButton)) {
             button.setBackground(colors.get("main_green"));
-            button.setForeground(colors.get("foreground_white"));
+            button.setForeground(colors.get("dark_gray"));
         }
- // Set foreground of labels
+        wyjdzButton.setBackground(colors.get("button_green"));
+        wylogujButton.setBackground(colors.get("button_green"));
+
+        // Set foreground of labels
         for (JLabel label : Arrays.asList(kartyLabel,historiaLabel,nameField,saldoField)) {
             label.setForeground(colors.get("foreground_white"));
         }
