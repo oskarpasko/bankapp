@@ -1,14 +1,10 @@
 import javax.swing.*;
 import javax.swing.border.CompoundBorder;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellEditor;
-import javax.swing.table.TableModel;
-import javax.swing.table.TableRowSorter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
-import java.util.*;
 
 public class MainFrame extends JFrame {
     private JPanel panel1;
@@ -211,7 +207,7 @@ public class MainFrame extends JFrame {
                         String card_nr = sumAllBalances.getString("card_nr");
                         String card_term_data = sumAllBalances.getString("card_term_data");
                         String card_type = sumAllBalances.getString("card_type");
-                        Float card_balance = sumAllBalances.getFloat("card_balance");
+                        String card_balance = sumAllBalances.getString("card_balance");
 
                         data[r][i] = card_nr;
                         data[r][i+1] = card_term_data;
@@ -224,35 +220,7 @@ public class MainFrame extends JFrame {
 
             // add headers to table and then display it (table)
             String[] headers = {"Numer Karty", "Data Ważności", "Typ Karty", "Saldo Karty"};
-            DefaultTableModel model = new DefaultTableModel(data, headers);
-            kartyTable.setModel(model);
-            TableRowSorter<TableModel> sorter = new TableRowSorter<>(model);
-            kartyTable.setRowSorter(sorter);
-            sorter.setComparator(3, new Comparator<Float>() {
-                @Override
-                public int compare(Float o1, Float o2) {
-                    // Negative values should be considered lower than positive values
-                    if (o1 < 0 && o2 > 0) {
-                        return -1;
-                    } else if (o1 > 0 && o2 < 0) {
-                        return 1;
-                    } else {
-                        // For positive values or when both values are negative, use the default comparison
-                        return o1.compareTo(o2);
-                    }
-                }
-            });
-
-            TableCellEditor editor = new DefaultCellEditor(new JTextField()) {
-                @Override
-                public boolean isCellEditable(EventObject e) {
-                    return false;
-                }
-            };
-            for (int i = 0; i < kartyTable.getColumnCount(); i++) {
-                kartyTable.setDefaultEditor(kartyTable.getColumnClass(i), editor);
-            }
-            kartyTable.getTableHeader().setReorderingAllowed(false);
+            kartyTable.setModel(new DefaultTableModel(data, headers));
             // END QUERY
 
 /**
@@ -295,7 +263,7 @@ public class MainFrame extends JFrame {
                         String overflow_send_number = sumAllOverflows.getString("overflow_send_number");
                         String overflow_recipent_number = sumAllOverflows.getString("overflow_recipent_number");
                         String overflow_data = sumAllOverflows.getString("overflow_data");
-                        Float overflow_amount = sumAllOverflows.getFloat("overflow_amount");
+                        String overflow_amount = sumAllOverflows.getString("overflow_amount");
 
                         oferflowData[r][i] = overflow_send_number;
                         oferflowData[r][i+1] = overflow_recipent_number;
@@ -308,30 +276,7 @@ public class MainFrame extends JFrame {
 
             // add headers to table and then display it (table)
             String[] oferflowHeaders = {"Nr Wysyłającego", "Nr Odbiorcy", "Data Przelewu", "Wartość przelewu"};
-
-            DefaultTableModel historiaModel = new DefaultTableModel(oferflowData, oferflowHeaders);
-            historiaTable.setModel(historiaModel);
-            TableRowSorter<TableModel> historiaSorter = new TableRowSorter<>(historiaModel);
-            historiaTable.setRowSorter(sorter);
-            historiaSorter.setComparator(3, new Comparator<Float>() {
-                @Override
-                public int compare(Float o1, Float o2) {
-                    // Negative values should be considered lower than positive values
-                    if (o1 < 0 && o2 > 0) {
-                        return -1;
-                    } else if (o1 > 0 && o2 < 0) {
-                        return 1;
-                    } else {
-                        // For positive values or when both values are negative, use the default comparison
-                        return o1.compareTo(o2);
-                    }
-                }
-            });
-
-            for (int i = 0; i < historiaTable.getColumnCount(); i++) {
-                historiaTable.setDefaultEditor(historiaTable.getColumnClass(i), editor);
-            }
-            historiaTable.getTableHeader().setReorderingAllowed(false);
+            historiaTable.setModel(new DefaultTableModel(oferflowData, oferflowHeaders));
             // END QUERY
 
         } catch (SQLException sqlException) {
@@ -341,55 +286,62 @@ public class MainFrame extends JFrame {
     }
 
     private void StylesFunction() {
-        Map<String, Color> colors = new HashMap<>();
-        colors.put("main_green", new Color(108, 220, 96));
-        colors.put("foreground_white", new Color(222, 222, 222));
-        colors.put("dark_gray", new Color(42, 42, 42));
-        colors.put("light_gray", new Color(63, 63, 63));
-        colors.put("button_green", new Color(129, 161, 125));
+        Color main_green = new Color(108, 220, 96);
+        Color foreground_white = new Color(222, 222, 222);
+        Color dark_gray = new Color(42, 42, 42);
+        Color light_gray = new Color(63, 63, 63);
+        Color button_gray = new Color(152, 152, 152);
+        Color button_green = new Color(129, 161, 125);
 
-// Set the background and foreground colors for all buttons
-        for (JButton button : Arrays.asList(wplataButton, wyplataButton, przelewButton, dodajButton, usunButton)) {
-            button.setBackground(colors.get("main_green"));
-            button.setForeground(colors.get("dark_gray"));
-        }
-        wyjdzButton.setBackground(colors.get("button_green"));
-        wylogujButton.setBackground(colors.get("button_green"));
+        /** buttons style **/
+        wplataButton.setBackground(main_green);
+        wyplataButton.setBackground(main_green);
+        przelewButton.setBackground(main_green);
+        wyjdzButton.setBackground(button_gray);
+        wylogujButton.setBackground(button_gray);
+        dodajButton.setBackground(button_green);
+        usunButton.setBackground(button_green);
 
-        // Set foreground of labels
-        for (JLabel label : Arrays.asList(kartyLabel,historiaLabel,nameField,saldoField)) {
-            label.setForeground(colors.get("foreground_white"));
-        }
+        /** background style **/
+        panel1.setBackground(dark_gray);
+        tabsPanel.setBackground(dark_gray);
+        saldoField.setBackground(dark_gray);
+        nameField.setBackground(dark_gray);
+        buttonsPanel.setBackground(dark_gray);
+        tabbedPane1.setBackground(light_gray);
+        kartyPanel.setBackground(light_gray);
+        historiaPanel.setBackground(light_gray);
+        kartyScroll.getViewport().setBackground(light_gray);
+        kartyTable.setBackground(light_gray);
+        kartyScroll.setBackground(light_gray);
+        kartyTable.getTableHeader().setBackground(light_gray);
+        historiaScroll.getViewport().setBackground(light_gray);
+        historiaTable.setBackground(light_gray);
+        historiaScroll.setBackground(light_gray);
+        historiaTable.getTableHeader().setBackground(light_gray);
+        
+        /** selection **/
+        kartyTable.setSelectionBackground(main_green);
+        kartyTable.setSelectionForeground(light_gray);
+        historiaTable.setSelectionBackground(main_green);
+        historiaTable.setSelectionForeground(light_gray);
+        /** labels **/
+        nameField.setForeground(main_green);
+        saldoField.setForeground(foreground_white);
+        tabbedPane1.setForeground(main_green);
+        kartyTable.setForeground(foreground_white);
+        kartyPanel.setForeground(foreground_white);
+        kartyScroll.setForeground(foreground_white);
+        kartyLabel.setForeground(foreground_white);
+        historiaLabel.setForeground(foreground_white);
+        kartyTable.getTableHeader().setForeground(foreground_white);
 
-// Set the background colors for all panels and scroll panes
-        for (JPanel panel : Arrays.asList(panel1, tabsPanel, buttonsPanel)) {
-            panel.setBackground(colors.get("dark_gray"));
-        }
-        for (JScrollPane scrollPane : Arrays.asList(kartyScroll, historiaScroll)) {
-            scrollPane.setBackground(colors.get("dark_gray"));
-            scrollPane.getViewport().setBackground(colors.get("dark_gray"));
-        }
-
-// Set the background and foreground colors for the tabbed pane and its tabs
-        tabbedPane1.setBackground(colors.get("light_gray"));
-        tabbedPane1.setForeground(colors.get("main_green"));
-        for (JPanel panel : Arrays.asList(kartyPanel, historiaPanel)) {
-            panel.setBackground(colors.get("light_gray"));
-            panel.setForeground(colors.get("foreground_white"));
-        }
-// Set the background and foreground colors for the tables and their headers
-        for (JTable table : Arrays.asList(kartyTable, historiaTable)) {
-            table.setBackground(colors.get("light_gray"));
-            table.setForeground(colors.get("foreground_white"));
-            table.getTableHeader().setBackground(colors.get("light_gray"));
-            table.getTableHeader().setForeground(colors.get("foreground_white"));
-        }
-
-// Set the selection background and foreground colors for the tables
-        kartyTable.setSelectionBackground(colors.get("main_green"));
-        kartyTable.setSelectionForeground(colors.get("light_gray"));
-        historiaTable.setSelectionBackground(colors.get("main_green"));
-        historiaTable.setSelectionForeground(colors.get("light_gray"));
+        historiaTable.setForeground(foreground_white);
+        historiaScroll.setForeground(foreground_white);
+        historiaTable.getTableHeader().setForeground(foreground_white);
+        historiaPanel.setForeground(foreground_white);
+        /** margin **/
+        panel1.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
 
     }
 
