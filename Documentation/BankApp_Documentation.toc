@@ -1,15 +1,15 @@
 \babel@toc {polish}{}\relax 
 \contentsline {section}{\numberline {1}Opis założeń projektu}{2}{}%
-\contentsline {section}{\numberline {2}Specyfikacja wymagań}{2}{}%
-\contentsline {subsection}{\numberline {2.1}Wymagania funkcjonalne}{2}{}%
-\contentsline {subsection}{\numberline {2.2}Wymagania niefunkcjonalne}{3}{}%
-\contentsline {section}{\numberline {3}Opis techniczny bazy danych}{3}{}%
-\contentsline {subsection}{\numberline {3.1}Opis założeń}{3}{}%
-\contentsline {subsection}{\numberline {3.2}Diagram ERD}{3}{}%
-\contentsline {subsection}{\numberline {3.3}Opis tabel w bazie danych}{3}{}%
-\contentsline {subsubsection}{\numberline {3.3.1}Tabela client}{3}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Tabela card}{4}{}%
-\contentsline {subsubsection}{\numberline {3.3.3}Tabela overflow}{4}{}%
-\contentsline {section}{\numberline {4}System kontroli wersji}{4}{}%
-\contentsline {section}{\numberline {5}Opis techniczny projektu}{4}{}%
-\contentsline {section}{\numberline {6}Tabela}{4}{}%
+\contentsline {section}{\numberline {2}Specyfikacja wymagań}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Wymagania funkcjonalne}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Wymagania niefunkcjonalne}{4}{}%
+\contentsline {section}{\numberline {3}Opis techniczny bazy danych}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Opis założeń}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Diagram ERD}{5}{}%
+\contentsline {subsection}{\numberline {3.3}Opis tabel w bazie danych}{5}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Tabela client}{5}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Tabela card}{5}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Tabela overflow}{6}{}%
+\contentsline {section}{\numberline {4}System kontroli wersji}{6}{}%
+\contentsline {section}{\numberline {5}Opis techniczny projektu}{6}{}%
+\contentsline {section}{\numberline {6}Tabela}{6}{}%
