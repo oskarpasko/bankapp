@@ -13,8 +13,9 @@
  
 \includegraphics[scale=0.2]{ur_inf_logo}\\ \\ \\ \\
 
-{ \huge \bfseries Programowanie obiektowe}\\[0.4cm] 
 \begin{center}
+	{ \huge \bfseries Programowanie obiektowe}\\[0.4cm] 
+
 	\textsc{\Large Aplikacja bankowa}\\[0.5cm] \\ \\ \\ \\ 
 	
 	\vspace{0.8cm}	
@@ -66,6 +67,7 @@
 
 \subsection{Wymagania funkcjonalne}
 \begin{itemize}
+\item Aplikacja oferuje połączenie z bazą danych.
 \item Bank oferuje usługi użytkownikom zarejestrowanym do aplikacji.
 \item Bank oferuje możliwość zarejestrowania się nowym użytkownikom.
 \item Klient może wpłacić lub wypłacić pieniądze z wybranej karty.
@@ -84,6 +86,37 @@
 \item Aplikacja tworzona jest w języku Java.
 \item Aplikacja nawiązuje połączenie z bazą danych w języku MySQL i używa rekordów w niej zapisanych.
 \end{itemize}
+
+%--------------------------------------------------------------------------------------------------
+%      OPIS TECHNICZNY BAZY DANYCH
+%--------------------------------------------------------------------------------------------------
+\section{Opis techniczny bazy danych}
+
+\subsection{Opis założeń}
+
+\quad Baza danych przechowuje dane klientów, kart płatniczych należących do poszczególnych klientów oraz 
+histori przelewów wykonanych przez klientów.
+
+\subsection{Diagram ERD}
+
+\includegraphics[scale=0.5]{erd}
+
+\subsection{Opis tabel w bazie danych}
+
+\subsubsection{Tabela client}
+
+\quad Tabela "client" przechowuje informacje na temat klienta. Przechowywane informację to sześciocyfrowy numer klienta, który jest kluczem głównym tabeli, hasło klienta, oraz imię i nazwisko klienta.\\
+
+\quad Podczas działania aplikacji na bazie danych zostają wykonywane działania wyświetlania, modyfikowania, wstawiania oraz usuwania danych.
+
+\subsubsection{Tabela card}
+
+\quad Tabela "card" przechowuje informację o kartach płatniczych klientów. W tabeli przechowujemy informację o szesnastocyfrowym numerze karty, który pełni rolę klucza głównego, datę ważności karty, numer zabezpieczający cvc, który jest zawsze trzycyfrowy, typ karty, saldo znajdujące się na karcie oraz numer klienta posiadającego daną kartę, ten numer jest zapisany jako klucz obcy tabeli połączony metodą wiele do jednego z tabelą "client".
+
+\subsubsection{Tabela overflow}
+
+\quad Tabela "card"  przechowuje informacje o przelewach dokonanych przez klientów. W tabeli przechowujemy klucz główny tabeli, numer karty, z której został wysłany przelew oraz numer karty, 
+na który został wysłany przelew, dodatkowo przechowujemy datę wykonania przelewu oraz jego wartość.
 
 %--------------------------------------------------------------------------------------------------
 %      OPIS TECHNICZNY PROJEKTU
