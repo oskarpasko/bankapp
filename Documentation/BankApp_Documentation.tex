@@ -20,23 +20,24 @@
 	
 	\vspace{0.8cm}	
 	
-	\emph{Prowadzący:} \\
-	mgr inż. Ewa Żesławska\\ \\ \\ \\ 
-	
-	\vspace{0.8cm}
-	
 	\emph{Autorzy:} \\
-	Oskar Paśko (117987)\\
-	Eliza Tworkowska (119003)
+	\textbf{Oskar Paśko} (117987)\\
+	\textbf{Eliza Tworkowska} (119003)	
+	
 	
 	\vspace{0.8cm}
 	
 	\emph{Kierunek:} \\
 	Informatyka i ekonometria
 	
-	\vspace{9cm}
+	\vspace{8cm}
 	
-	\today
+	\emph{Prowadzący:} \\
+	mgr inż. Ewa Żesławska\\ \\ \\ \\ 
+	
+	\vspace{2cm}
+	
+	Rzeszów, 2023
 \end{center}
 \end{titlepage}
 %--------------------------------------------------------------------------------------------------
@@ -58,7 +59,14 @@
 %--------------------------------------------------------------------------------------------------
 \section{Opis założeń projektu}
 
-\quad Użytkownik, który posiada konto w bazie danych może się zalogować do aplikacji za pomocą swojego numeru klienta oraz hasła. Na głównej stronie aplikacji użytkownik może sprawdzić swojego aktualne saldo, na które składają sie salda wszystkich jego kart posiadanych w banku. Tabela ze wszystkimi kartami widoczna jest w centralnym punkcie strony głównej. Dodatkowo na stronie głównej użytkownik może sprawdzić swoją historię przelewów jakich dokonał. Klient może dokonać wpłaty na wybraną przez siebie kartę oraz wypłaty przez wybraną karte z założeniem, że posiada on wystarczająco środków na karcie. Możliwe jest również dokonanie przelewów z założeniami podobnymi do wyboru pieniędzy. Użytkownik ponad to może dodać nową kartę płatniczą lub usunąć isniejącą karte płatniczą zakładająć, że jej bilans wynosi 0zł.
+\quad Niniejszy projekt dotyczy aplikacji bankowej, która ma za zadanie ułatwić klientowi
+z korzystania z dostępnych na rynku usług bankowych.
+
+\quad Użytkownik posiadający konto w bazie danych niniejszej aplikacji może się zalogować do niej za pomocą swojego numeru klienta oraz hasła. Na głównej stronie może sprawdzić swoje aktualne saldo, na które składają sie salda wszystkich jego kart posiadanych w banku. Tabela ze wszystkimi kartami widoczna jest w centralnym punkcie strony głównej. Dodatkowo, na stronie głównej, użytkownik może sprawdzić historię transakcji. Ponadto klient może dokonać wpłaty na wybraną przez siebie kartę oraz wypłaty z wybranej przez siebie karty z założeniem, że posiada na niej wystarczającą ilość środków. Dzięki aplikacji możliwe jest również dokonanie przelewów z założeniami takimi 
+jak w przypadku wpłat i wypłat. Użytkownik ponadto może dodać nową kartę płatniczą lub usunąć isniejącą przy 
+założeniu,że jej bilans wynosi 0 zł.
+
+\newpage
 
 %--------------------------------------------------------------------------------------------------
 %      SPECYFIKACJA WYMAGAŃ
@@ -68,24 +76,26 @@
 \subsection{Wymagania funkcjonalne}
 \begin{itemize}
 \item Aplikacja oferuje połączenie z bazą danych.
-\item Bank oferuje usługi użytkownikom zarejestrowanym do aplikacji.
+\item Bank oferuje usługi użytkownikom zarejestrowanym w aplikacji.
 \item Bank oferuje możliwość zarejestrowania się nowym użytkownikom.
 \item Klient może wpłacić lub wypłacić pieniądze z wybranej karty.
 \item Klient może dokonać przelewu na wybraną kartę.
-\item Klient może sprawdzić stan swoich kart płatniczych.
-\item Klient może sprawdzić historię swoich przelewów.
-\item Zarejestrowany klient może dodać nową kartę platniczą do swojego konta.
+\item Klient może sprawdzić saldo swoich kart płatniczych.
+\item Klient może sprawdzić historię przelewów.
+\item Zarejestrowany klient może dodać nową kartę płatniczą do swojego konta.
 \end{itemize}
 
 \newpage
 
 \subsection{Wymagania niefunkcjonalne}
 \begin{itemize}
-\item Możliwość dodawania, usuwania, oraz edycji rekordów w bazie podczas działania aplikacji.
-\item Aplikacja jest przyjazna dla klienta i jego rodziny, oraz jest prosta w użyciu.
+\item Możliwość dodawania, usuwania oraz edycji rekordów w bazie podczas działania aplikacji.
+\item Aplikacja jest przyjazna dla klienta i jego rodziny oraz jest prosta\\ w użyciu.
 \item Aplikacja tworzona jest w języku Java.
 \item Aplikacja nawiązuje połączenie z bazą danych w języku MySQL i używa rekordów w niej zapisanych.
 \end{itemize}
+
+\newpage
 
 %--------------------------------------------------------------------------------------------------
 %      OPIS TECHNICZNY BAZY DANYCH
@@ -94,8 +104,10 @@
 
 \subsection{Opis założeń}
 
-\quad Baza danych przechowuje dane klientów, kart płatniczych należących do poszczególnych klientów oraz 
-histori przelewów wykonanych przez klientów.
+\quad Baza danych przechowuje dane klientów oraz należących do nich kart płatniczych, jak również  
+historię wykonanych przelewów.\\
+
+\quad Podczas działania aplikacji na bazie danych zostają wykonywane działania wyświetlania, modyfikowania, wstawiania oraz usuwania danych.
 
 \subsection{Diagram ERD}
 
@@ -105,20 +117,19 @@ histori przelewów wykonanych przez klientów.
 
 \subsubsection{Tabela client}
 
-\quad Tabela "client" przechowuje informacje na temat klienta. Przechowywane informację to sześciocyfrowy numer klienta, który jest kluczem głównym tabeli, hasło klienta, oraz imię i nazwisko klienta.\\
+\quad Tabela "client" przechowuje informacje na temat klienta. Przechowywane informacje to sześciocyfrowy numer klienta, który jest kluczem głównym tabeli, hasło klienta oraz imię i nazwisko klienta.\\
 
-\quad Podczas działania aplikacji na bazie danych zostają wykonywane działania wyświetlania, modyfikowania, wstawiania oraz usuwania danych.
 
 \subsubsection{Tabela card}
 
-\quad Tabela "card" przechowuje informację o kartach płatniczych klientów. W tabeli przechowujemy informację o szesnastocyfrowym numerze karty, który pełni rolę klucza głównego, datę ważności karty, numer zabezpieczający cvc, który jest zawsze trzycyfrowy, typ karty, saldo znajdujące się na karcie oraz numer klienta posiadającego daną kartę, ten numer jest zapisany jako klucz obcy tabeli połączony metodą wiele do jednego z tabelą "client".
+\quad Tabela "card" przechowuje informacje o kartach płatniczych klientów.\\ W tabeli przechowujemy informacje o szesnastocyfrowym numerze karty, który pełni rolę klucza głównego, datę ważności karty, numer zabezpieczający cvc, który jest zawsze trzycyfrowy, typ karty, saldo znajdujące się na karcie oraz numer klienta posiadającego daną kartę. Numer ten jest zapisany jako klucz obcy tabeli połączony metodą wiele do jednego z tabelą "client".
 
 
 
 \subsubsection{Tabela overflow}
 
-\quad Tabela "card"  przechowuje informacje o przelewach dokonanych przez klientów. W tabeli przechowujemy klucz główny tabeli, numer karty, z której został wysłany przelew oraz numer karty, 
-na który został wysłany przelew, dodatkowo przechowujemy datę wykonania przelewu oraz jego wartość.
+\quad Tabela "card"  przechowuje informacje o przelewach dokonanych przez klienta. W tabeli przechowujemy klucz główny tabeli, numer karty, z której został wysłany przelew oraz numer karty, 
+na którą został wysłany przelew. Dodatkowo przechowuje datę wykonania przelewu oraz jego wartość.
 
 %--------------------------------------------------------------------------------------------------
 %      SYSTEM KONTORLI WERSJI
@@ -126,7 +137,7 @@ na który został wysłany przelew, dodatkowo przechowujemy datę wykonania prze
 
 \section{System kontroli wersji}
 
-\quad Projekt realizowany był z wykorzystaniem systemu kontroli wersji Git, a wszystkie pliki źródłowe projektu znajdują się pod adresem:\\  \url{https://www.github.com/oskarpasko/BankApp} . 
+\quad Projekt realizowany był z wykorzystaniem systemu kontroli wersji Git,\\ a wszystkie pliki źródłowe projektu znajdują się pod adresem:\\  \url{https://www.github.com/oskarpasko/BankApp} . 
 
 %--------------------------------------------------------------------------------------------------
 %      OPIS TECHNICZNY PROJEKTU
