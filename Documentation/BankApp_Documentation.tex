@@ -113,10 +113,20 @@ histori przelewów wykonanych przez klientów.
 
 \quad Tabela "card" przechowuje informację o kartach płatniczych klientów. W tabeli przechowujemy informację o szesnastocyfrowym numerze karty, który pełni rolę klucza głównego, datę ważności karty, numer zabezpieczający cvc, który jest zawsze trzycyfrowy, typ karty, saldo znajdujące się na karcie oraz numer klienta posiadającego daną kartę, ten numer jest zapisany jako klucz obcy tabeli połączony metodą wiele do jednego z tabelą "client".
 
+
+
 \subsubsection{Tabela overflow}
 
 \quad Tabela "card"  przechowuje informacje o przelewach dokonanych przez klientów. W tabeli przechowujemy klucz główny tabeli, numer karty, z której został wysłany przelew oraz numer karty, 
 na który został wysłany przelew, dodatkowo przechowujemy datę wykonania przelewu oraz jego wartość.
+
+%--------------------------------------------------------------------------------------------------
+%      SYSTEM KONTORLI WERSJI
+%--------------------------------------------------------------------------------------------------
+
+\section{System kontroli wersji}
+
+\quad Projekt realizowany był z wykorzystaniem systemu kontroli wersji Git, a wszystkie pliki źródłowe projektu znajdują się pod adresem:\\  \url{https://www.github.com/oskarpasko/BankApp} . 
 
 %--------------------------------------------------------------------------------------------------
 %      OPIS TECHNICZNY PROJEKTU
