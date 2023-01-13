@@ -1,11 +1,14 @@
 import javax.swing.*;
 import javax.swing.border.CompoundBorder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -223,7 +226,25 @@ public class MainFrame extends JFrame {
 
             // add headers to table and then display it (table)
             String[] headers = {"Numer Karty", "Data Ważności", "Typ Karty", "Saldo Karty"};
-            kartyTable.setModel(new DefaultTableModel(data, headers));
+            DefaultTableModel model = new DefaultTableModel(data, headers);
+            kartyTable.setModel(model);
+            TableRowSorter<TableModel> sorter = new TableRowSorter<>(model);
+            kartyTable.setRowSorter(sorter);
+            sorter.setComparator(3, new Comparator<Float>() {
+                @Override
+                public int compare(Float o1, Float o2) {
+                    // Negative values should be considered lower than positive values
+                    if (o1 < 0 && o2 > 0) {
+                        return -1;
+                    } else if (o1 > 0 && o2 < 0) {
+                        return 1;
+                    } else {
+                        // For positive values or when both values are negative, use the default comparison
+                        return o1.compareTo(o2);
+                    }
+                }
+            });
+            kartyTable.getTableHeader().setReorderingAllowed(false);
             // END QUERY
 
 /**
