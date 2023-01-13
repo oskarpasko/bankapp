@@ -8,25 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BankApp/LoginFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/LoginFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BankApp/LoginFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/LoginFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$9.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/NewUser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/NewUser$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/NewUser$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/NewUser$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/NewUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/NewUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddCard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrzelewyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrzelewyFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RemoveCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoveCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WplataFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WyplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WyplataFrame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +110,7 @@
       <workItem from="1672667079040" duration="1852000" />
       <workItem from="1672876110875" duration="2504000" />
       <workItem from="1672913862475" duration="978000" />
+      <workItem from="1673604921031" duration="1351000" />
     </task>
     <servers />
   </component>

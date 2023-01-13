@@ -243,15 +243,15 @@ public class MainFrame extends JFrame {
                 }
             });
 
-            TableCellEditor editor = new DefaultCellEditor(new JTextField()) {
-                @Override
-                public boolean isCellEditable(EventObject e) {
-                    return false;
-                }
-            };
-            for (int i = 0; i < kartyTable.getColumnCount(); i++) {
-                kartyTable.setDefaultEditor(kartyTable.getColumnClass(i), editor);
-            }
+//            TableCellEditor editor = new DefaultCellEditor(new JTextField()) {
+//                @Override
+//                public boolean isCellEditable(EventObject e) {
+//                    return false;
+//                }
+//            };
+//            for (int i = 0; i < kartyTable.getColumnCount(); i++) {
+//                kartyTable.setDefaultEditor(kartyTable.getColumnClass(i), editor);
+//            }
             kartyTable.getTableHeader().setReorderingAllowed(false);
             // END QUERY
 
@@ -279,7 +279,7 @@ public class MainFrame extends JFrame {
                     .prepareStatement(
                             "SELECT overflow_send_number, overflow_recipent_number, overflow_data, overflow_amount FROM bankapp.overflow  " +
                             "LEFT JOIN card ON overflow.overflow_send_number = card.card_nr OR overflow.overflow_recipent_number = card.card_nr  " +
-                            "WHERE client_nr =?");
+                            "WHERE client_nr =? ORDER BY overflow_data DESC");
 
             allOverflows.setString(1, client_nr);
             ResultSet sumAllOverflows = allOverflows.executeQuery();
@@ -311,27 +311,27 @@ public class MainFrame extends JFrame {
 
             DefaultTableModel historiaModel = new DefaultTableModel(oferflowData, oferflowHeaders);
             historiaTable.setModel(historiaModel);
-            TableRowSorter<TableModel> historiaSorter = new TableRowSorter<>(historiaModel);
-            historiaTable.setRowSorter(sorter);
-            historiaSorter.setComparator(3, new Comparator<Float>() {
-                @Override
-                public int compare(Float o1, Float o2) {
-                    // Negative values should be considered lower than positive values
-                    if (o1 < 0 && o2 > 0) {
-                        return -1;
-                    } else if (o1 > 0 && o2 < 0) {
-                        return 1;
-                    } else {
-                        // For positive values or when both values are negative, use the default comparison
-                        return o1.compareTo(o2);
-                    }
-                }
-            });
-
-            for (int i = 0; i < historiaTable.getColumnCount(); i++) {
-                historiaTable.setDefaultEditor(historiaTable.getColumnClass(i), editor);
-            }
-            historiaTable.getTableHeader().setReorderingAllowed(false);
+//            TableRowSorter<TableModel> historiaSorter = new TableRowSorter<>(historiaModel);
+//            historiaTable.setRowSorter(sorter);
+//            historiaSorter.setComparator(3, new Comparator<Float>() {
+//                @Override
+//                public int compare(Float o1, Float o2) {
+//                    // Negative values should be considered lower than positive values
+//                    if (o1 < 0 && o2 > 0) {
+//                        return -1;
+//                    } else if (o1 > 0 && o2 < 0) {
+//                        return 1;
+//                    } else {
+//                        // For positive values or when both values are negative, use the default comparison
+//                        return o1.compareTo(o2);
+//                    }
+//                }
+//            });
+//
+//            for (int i = 0; i < historiaTable.getColumnCount(); i++) {
+//                historiaTable.setDefaultEditor(historiaTable.getColumnClass(i), editor);
+//            }
+//            historiaTable.getTableHeader().setReorderingAllowed(false);
             // END QUERY
 
         } catch (SQLException sqlException) {

@@ -19,6 +19,8 @@ public class LoginFrame extends JFrame {
     private JButton newUserButton;
     private JPanel buttonsPanel;
 
+
+
     // URL for connection with database
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
