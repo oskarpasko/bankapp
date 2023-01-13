@@ -8,6 +8,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 import java.util.regex.Pattern;
 
@@ -95,25 +98,27 @@ public class AddCard extends JFrame {
     }
 
     private void StylesFunction() {
-        Color main_green = new Color(108, 220, 96);
-        Color foreground_white = new Color(222, 222, 222);
-        Color dark_gray = new Color(42, 42, 42);
-        Color button_green = new Color(129, 161, 125);
+        Map<String, Color> colors = new HashMap<>();
+        colors.put("main_green", new Color(108, 220, 96));
+        colors.put("foreground_white", new Color(222, 222, 222));
+        colors.put("dark_gray", new Color(42, 42, 42));
+        colors.put("button_green", new Color(129, 161, 125));
 
-        /** background setter **/
-        panel1.setBackground(dark_gray);
-        mainPanel.setBackground(dark_gray);
-        formPanel.setBackground(dark_gray);
+        /** setting the background of panels **/
+        for (JPanel panel : Arrays.asList(panel1, mainPanel, formPanel)) {
+            panel.setBackground(colors.get("dark_gray"));
+        }
 
-        /** foreground setter **/
-        kartaLabel.setForeground(foreground_white);
-        nrLabel.setForeground(foreground_white);
+        /** setting the font color of labels **/
+        for (JLabel label : Arrays.asList(kartaLabel,nrLabel)) {
+            label.setForeground(colors.get("foreground_white"));
+        }
 
         /** buttons **/
-        OKButton.setBackground(main_green);
-        OKButton.setForeground(dark_gray);
-        backButton.setBackground(button_green);
-        backButton.setForeground(foreground_white);
+        OKButton.setBackground(colors.get("main_green"));
+        OKButton.setForeground(colors.get("dark_gray"));
+        backButton.setBackground(colors.get("button_green"));
+        backButton.setForeground(colors.get("foreground_white"));
         /** margins **/
         panel1.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
     }
