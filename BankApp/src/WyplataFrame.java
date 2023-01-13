@@ -6,6 +6,7 @@ import java.sql.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class WyplataFrame extends JFrame {
     private JPanel panel1;
@@ -139,12 +140,14 @@ public class WyplataFrame extends JFrame {
                 } else if (a500RadioButton.isSelected()) {
                     value = 500;
                 } else if (wlasnaRadio.isSelected()) {
+                    if(!isNumeric(wlasnaRadio.getText())) {
+                        JOptionPane.showMessageDialog(WyplataFrame.this, "Błędna kwota!");
+                    } else {
                     if (wlasnaRadio.getText().equals("")) {
                         JOptionPane.showMessageDialog(WyplataFrame.this, "Błędna kwota!");
                     } else {
                         value = Integer.parseInt(wlasnaText.getText());
-                    }
-                }
+
 
                 if (value >= 10 && value % 10 == 0) {
 
@@ -212,7 +215,8 @@ public class WyplataFrame extends JFrame {
                         main.setVisible(true);
                     }}
                 } else JOptionPane.showMessageDialog(WyplataFrame.this, "Błędna kwota!");
-            }
+                    }}
+                }}
         });
 
         backButton.addActionListener(new ActionListener() {
@@ -255,5 +259,13 @@ public class WyplataFrame extends JFrame {
 
         /** margins **/
         panel1.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+    }
+
+    private Pattern pattern = Pattern.compile("[0-9]+");
+    private boolean isNumeric(String value) {
+        if (value == null) {
+            return false;
+        }
+        return pattern.matcher(value).matches();
     }
 }
