@@ -6,6 +6,7 @@ import java.sql.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class WplataFrame extends JFrame {
     private JPanel panel1;
@@ -80,6 +81,9 @@ public class WplataFrame extends JFrame {
         OKButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if(!isNumeric(textValue.getText())) {
+                    JOptionPane.showMessageDialog(WplataFrame.this,"Błędna kwota!");
+                } else {
                 value = Float.parseFloat(textValue.getText());
                 spinner = (Integer) spinnerAmount.getValue();
                 if (value >= 10 && value <= 1000 && spinner >= 1 && spinner <= 10) {
@@ -115,7 +119,7 @@ public class WplataFrame extends JFrame {
                 } else {
                     JOptionPane.showMessageDialog(WplataFrame.this, "Błędna kwota!");
                 }
-            }
+            }}
         });
         backButton.addActionListener(new ActionListener() {
             @Override
@@ -152,5 +156,13 @@ public class WplataFrame extends JFrame {
 
         /** margins **/
         panel1.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
+    }
+
+    private Pattern pattern = Pattern.compile("[0-9]+");
+    private boolean isNumeric(String value) {
+        if (value == null) {
+            return false;
+        }
+        return pattern.matcher(value).matches();
     }
 }
