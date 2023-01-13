@@ -30,11 +30,12 @@ public class NewUser extends JFrame {
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
     public NewUser() {
-        super("Register new User");
+        super("Stwórz nowego użytkownika");
         StylesFunction();
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new GridLayout());
+        this.setIconImage(LoginFrame.img.getImage());
         this.pack();
         /** center window **/
         this.setLocationRelativeTo(null);

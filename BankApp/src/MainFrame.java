@@ -39,10 +39,12 @@ public class MainFrame extends JFrame {
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
     public MainFrame(String client_number) {
-        super("MainFrame");
+        super("BankApp");
         StylesFunction();
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setIconImage(LoginFrame.img.getImage());
+
 //        this.setSize(700,600);
         this.setLayout(new GridBagLayout());
 

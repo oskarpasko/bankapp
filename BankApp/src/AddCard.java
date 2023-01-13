@@ -28,12 +28,13 @@ public class AddCard extends JFrame {
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
     public AddCard(String client_number) {
-        super("Add Cards");
+        super("Dodaj kartę");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         StylesFunction();
         this.setLayout(new GridLayout());
         this.pack();
+        this.setIconImage(LoginFrame.img.getImage());
         this.setMinimumSize(new Dimension(600,400));
         this.setLocationRelativeTo(null);
 

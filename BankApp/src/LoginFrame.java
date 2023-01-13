@@ -18,6 +18,7 @@ public class LoginFrame extends JFrame {
     private JLabel passLabel;
     private JButton newUserButton;
     private JPanel buttonsPanel;
+    public static ImageIcon img = new ImageIcon(LoginFrame.class.getResource("images/icon.png"));
 
     // URL for connection with database
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
@@ -28,12 +29,13 @@ public class LoginFrame extends JFrame {
     }
 
     public LoginFrame() {
-        super("LoginFrame");
+        super("Zaloguj się!");
         StylesFunction();
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new GridLayout());
         this.pack();
+        this.setIconImage(img.getImage());
         /** center window **/
         this.setLocationRelativeTo(null);
 
