@@ -32,11 +32,13 @@ public class WyplataFrame extends JFrame {
     private static final String DB_URL = "jdbc:mysql://localhost:3306/bankapp";
 
     public WyplataFrame(String client_nr) {
-        super("WyplataFrame");
+        super("Wypłata środków");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         StylesFunction();
         this.setLayout(new GridLayout());
+        this.setIconImage(LoginFrame.img.getImage());
+
         this.pack();
         this.setMinimumSize(new Dimension(600,400));
         this.setLocationRelativeTo(null);

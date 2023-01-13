@@ -24,11 +24,13 @@ public class RemoveCard extends JFrame {
     Object[][] cardData = new Object[0][];
     float balance = 0;
     public RemoveCard(String client_nr) {
-        super("Remove Card");
+        super("Usuń kartę");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         StylesFunction();
         this.setLayout(new GridLayout());
+        this.setIconImage(LoginFrame.img.getImage());
+
         this.pack();
         this.setMinimumSize(new Dimension(600,400));
         this.setLocationRelativeTo(null);

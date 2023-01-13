@@ -31,11 +31,13 @@ public class PrzelewyFrame extends JFrame {
 //        panel.setVisible(true);
 //    }
     public PrzelewyFrame(String client_nr) {
-        super("PrzelewyFrame");
+        super("Nowy przelew");
         this.setContentPane(this.panel1); // wyswietlanie okienka na ekranie
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         StylesFunction();
         this.setLayout(new GridLayout());
+        this.setIconImage(LoginFrame.img.getImage());
+
         this.pack();
         this.setMinimumSize(new Dimension(600,400));
         this.setLocationRelativeTo(null);
