@@ -2,14 +2,22 @@
 \contentsline {section}{\numberline {1}Opis założeń projektu}{2}{}%
 \contentsline {section}{\numberline {2}Specyfikacja wymagań}{3}{}%
 \contentsline {subsection}{\numberline {2.1}Wymagania funkcjonalne}{3}{}%
-\contentsline {subsection}{\numberline {2.2}Wymagania niefunkcjonalne}{4}{}%
-\contentsline {section}{\numberline {3}Opis techniczny bazy danych}{5}{}%
-\contentsline {subsection}{\numberline {3.1}Opis założeń}{5}{}%
-\contentsline {subsection}{\numberline {3.2}Diagram ERD}{5}{}%
-\contentsline {subsection}{\numberline {3.3}Opis tabel w bazie danych}{5}{}%
-\contentsline {subsubsection}{\numberline {3.3.1}Tabela client}{5}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Tabela card}{5}{}%
-\contentsline {subsubsection}{\numberline {3.3.3}Tabela overflow}{6}{}%
-\contentsline {section}{\numberline {4}System kontroli wersji}{6}{}%
-\contentsline {section}{\numberline {5}Opis techniczny projektu}{6}{}%
-\contentsline {section}{\numberline {6}Tabela}{6}{}%
+\contentsline {subsection}{\numberline {2.2}Wymagania niefunkcjonalne}{3}{}%
+\contentsline {section}{\numberline {3}Opis techniczny bazy danych}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Opis założeń}{4}{}%
+\contentsline {subsection}{\numberline {3.2}Diagram ERD}{4}{}%
+\contentsline {subsection}{\numberline {3.3}Opis tabel w bazie danych}{4}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Tabela client}{4}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Tabela card}{4}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Tabela overflow}{5}{}%
+\contentsline {section}{\numberline {4}Warstwa użytkowa projektu}{6}{}%
+\contentsline {subsection}{\numberline {4.1}LoginFrame}{6}{}%
+\contentsline {subsection}{\numberline {4.2}NewUser}{7}{}%
+\contentsline {subsection}{\numberline {4.3}MainFrame}{9}{}%
+\contentsline {subsection}{\numberline {4.4}Dodaj Kartę}{10}{}%
+\contentsline {subsection}{\numberline {4.5}Usuń Kartę}{11}{}%
+\contentsline {subsection}{\numberline {4.6}Wpłata}{12}{}%
+\contentsline {subsection}{\numberline {4.7}Wypłata}{13}{}%
+\contentsline {subsection}{\numberline {4.8}Przelew}{14}{}%
+\contentsline {section}{\numberline {5}System kontroli wersji}{15}{}%
+\contentsline {section}{\numberline {6}Opis techniczny projektu}{15}{}%
