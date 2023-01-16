@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.24)  9 JAN 2023 18:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.24)  16 JAN 2023 14:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,37 +302,99 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `BankApp_Documentation.toc'.
 
- [1] [2] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 107--109
+ [1] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
 
  []
 
-<images//erd.png, id=29, 797.47937pt x 188.705pt>
+<images//erd.png, id=26, 797.47937pt x 188.705pt>
 File: images//erd.png Graphic file (type png)
 <use images//erd.png>
-Package pdftex.def Info: images//erd.png  used on input line 114.
+Package pdftex.def Info: images//erd.png  used on input line 113.
 (pdftex.def)             Requested size: 398.73871pt x 94.35226pt.
 
-Overfull \hbox (8.73871pt too wide) in paragraph at lines 114--115
+Overfull \hbox (8.73871pt too wide) in paragraph at lines 113--114
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
 
-Overfull \hbox (10.70764pt too wide) in paragraph at lines 131--133
+Overfull \hbox (10.70764pt too wide) in paragraph at lines 130--132
  \T1/cmr/m/n/12 Ta-bela "card"przechowuje in-for-ma-cje o prze-le-wach do-ko-na
 -nych przez klienta.
  []
 
-[5 <./images//erd.png>]
+[4 <./images//erd.png>] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 149--151
+
+ []
+
+<images//login.png, id=34, 221.628pt x 168.63pt>
+File: images//login.png Graphic file (type png)
+<use images//login.png>
+Package pdftex.def Info: images//login.png  used on input line 153.
+(pdftex.def)             Requested size: 177.30263pt x 134.90417pt.
+[6 <./images//login.png>]
+<images//newuser.png, id=40, 251.7405pt x 278.84175pt>
+File: images//newuser.png Graphic file (type png)
+<use images//newuser.png>
+Package pdftex.def Info: images//newuser.png  used on input line 180.
+(pdftex.def)             Requested size: 151.04546pt x 167.30632pt.
+ [7 <./images//newuser.png>] [8]
+<images//mainkarty.png, id=48, 457.71pt x 242.70676pt>
+File: images//mainkarty.png Graphic file (type png)
+<use images//mainkarty.png>
+Package pdftex.def Info: images//mainkarty.png  used on input line 208.
+(pdftex.def)             Requested size: 228.85445pt x 121.35307pt.
+<images//mainhistoria.png, id=49, 457.71pt x 242.70676pt>
+File: images//mainhistoria.png Graphic file (type png)
+<use images//mainhistoria.png>
+Package pdftex.def Info: images//mainhistoria.png  used on input line 209.
+(pdftex.def)             Requested size: 228.85445pt x 121.35307pt.
+ [9 <./images//mainkarty.png> <./images//mainhistoria.png>]
+<images//dodaj.png, id=55, 440.847pt x 295.70474pt>
+File: images//dodaj.png Graphic file (type png)
+<use images//dodaj.png>
+Package pdftex.def Info: images//dodaj.png  used on input line 229.
+(pdftex.def)             Requested size: 264.51024pt x 177.42421pt.
+ [10 <./images//dodaj.png>]
+<images//usun.png, id=60, 440.847pt x 295.70474pt>
+File: images//usun.png Graphic file (type png)
+<use images//usun.png>
+Package pdftex.def Info: images//usun.png  used on input line 250.
+(pdftex.def)             Requested size: 264.51024pt x 177.42421pt.
+ [11 <./images//usun.png>]
+<images//wplata.png, id=65, 440.847pt x 295.70474pt>
+File: images//wplata.png Graphic file (type png)
+<use images//wplata.png>
+Package pdftex.def Info: images//wplata.png  used on input line 283.
+(pdftex.def)             Requested size: 264.51024pt x 177.42421pt.
+ [12 <./images//wplata.png>]
+Overfull \hbox (40.4022pt too wide) in paragraph at lines 294--295
+[]\T1/cmr/m/n/12 Przycisku typu ra-dio z war-to-±ci¡, jak¡ chcemy wy-bra¢ (50,1
+00,200,300,500,Wªa-
+ []
+
+<images//wyplata.png, id=71, 440.847pt x 295.70474pt>
+File: images//wyplata.png Graphic file (type png)
+<use images//wyplata.png>
+Package pdftex.def Info: images//wyplata.png  used on input line 306.
+(pdftex.def)             Requested size: 264.51024pt x 177.42421pt.
+[13 <./images//wyplata.png>]
+<images//przelew.png, id=76, 440.847pt x 295.70474pt>
+File: images//przelew.png Graphic file (type png)
+<use images//przelew.png>
+Package pdftex.def Info: images//przelew.png  used on input line 338.
+(pdftex.def)             Requested size: 220.42296pt x 147.852pt.
+ [14 <./images//przelew.png>]
 ! Undefined control sequence.
 <recently read> \url 
                      
-l.140 ...jektu znajdujÄ… siÄ™ pod adresem:\\  \url
+l.350 ...jektu znajdujÄ… siÄ™ pod adresem:\\  \url
                                                   {https://www.github.com/os...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -340,29 +402,29 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[6] (./BankApp_Documentation.aux) ) 
+[15] (./BankApp_Documentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3191 strings out of 478268
- 53975 string characters out of 5846346
- 356191 words of memory out of 5000000
- 21370 multiletter control sequences out of 15000+600000
+ 3295 strings out of 478268
+ 56132 string characters out of 5846346
+ 358193 words of memory out of 5000000
+ 21474 multiletter control sequences out of 15000+600000
  480539 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,6n,67p,766b,353s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/en
-c/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc
-/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1
-/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
-ublic/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
-lic/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
-c/cm-super/sfbx2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
-cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm
--super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-s
-uper/sfti1200.pfb>
-Output written on BankApp_Documentation.pdf (7 pages, 463136 bytes).
+ 60i,5n,67p,766b,353s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/e
+nc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/en
+c/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type
+1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
+public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pu
+blic/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publ
+ic/cm-super/sfbx2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
+/cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/c
+m-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-
+super/sfti1200.pfb>
+Output written on BankApp_Documentation.pdf (16 pages, 557188 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
