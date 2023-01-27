@@ -11,13 +11,14 @@
 \contentsline {subsubsection}{\numberline {3.3.2}Tabela card}{4}{}%
 \contentsline {subsubsection}{\numberline {3.3.3}Tabela overflow}{5}{}%
 \contentsline {section}{\numberline {4}Warstwa użytkowa projektu}{6}{}%
-\contentsline {subsection}{\numberline {4.1}LoginFrame}{6}{}%
-\contentsline {subsection}{\numberline {4.2}NewUser}{7}{}%
-\contentsline {subsection}{\numberline {4.3}MainFrame}{9}{}%
-\contentsline {subsection}{\numberline {4.4}Dodaj Kartę}{10}{}%
-\contentsline {subsection}{\numberline {4.5}Usuń Kartę}{11}{}%
-\contentsline {subsection}{\numberline {4.6}Wpłata}{12}{}%
-\contentsline {subsection}{\numberline {4.7}Wypłata}{13}{}%
-\contentsline {subsection}{\numberline {4.8}Przelew}{14}{}%
-\contentsline {section}{\numberline {5}System kontroli wersji}{15}{}%
-\contentsline {section}{\numberline {6}Opis techniczny projektu}{15}{}%
+\contentsline {subsection}{\numberline {4.1}Diagram przypadków użycia}{6}{}%
+\contentsline {subsection}{\numberline {4.2}LoginFrame}{7}{}%
+\contentsline {subsection}{\numberline {4.3}NewUser}{8}{}%
+\contentsline {subsection}{\numberline {4.4}MainFrame}{10}{}%
+\contentsline {subsection}{\numberline {4.5}Dodaj Kartę}{11}{}%
+\contentsline {subsection}{\numberline {4.6}Usuń Kartę}{12}{}%
+\contentsline {subsection}{\numberline {4.7}Wpłata}{13}{}%
+\contentsline {subsection}{\numberline {4.8}Wypłata}{14}{}%
+\contentsline {subsection}{\numberline {4.9}Przelew}{15}{}%
+\contentsline {section}{\numberline {5}System kontroli wersji}{16}{}%
+\contentsline {section}{\numberline {6}Opis techniczny projektu}{16}{}%

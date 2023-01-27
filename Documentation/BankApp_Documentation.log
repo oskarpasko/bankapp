@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.24)  16 JAN 2023 14:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.24)  27 JAN 2023 13:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -329,72 +329,83 @@ Overfull \hbox (10.70764pt too wide) in paragraph at lines 130--132
  []
 
 [4 <./images//erd.png>] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 149--151
+<images//UseCase.png, id=34, 806.01125pt x 316.18124pt>
+File: images//UseCase.png Graphic file (type png)
+<use images//UseCase.png>
+Package pdftex.def Info: images//UseCase.png  used on input line 144.
+(pdftex.def)             Requested size: 403.00464pt x 158.09023pt.
+
+Overfull \hbox (13.00464pt too wide) in paragraph at lines 144--145
+ [] 
+ []
+
+[6 <./images//UseCase.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
-<images//login.png, id=34, 221.628pt x 168.63pt>
+<images//login.png, id=40, 221.628pt x 168.63pt>
 File: images//login.png Graphic file (type png)
 <use images//login.png>
-Package pdftex.def Info: images//login.png  used on input line 153.
+Package pdftex.def Info: images//login.png  used on input line 161.
 (pdftex.def)             Requested size: 177.30263pt x 134.90417pt.
-[6 <./images//login.png>]
-<images//newuser.png, id=40, 251.7405pt x 278.84175pt>
+[7 <./images//login.png>]
+<images//newuser.png, id=45, 251.7405pt x 278.84175pt>
 File: images//newuser.png Graphic file (type png)
 <use images//newuser.png>
-Package pdftex.def Info: images//newuser.png  used on input line 180.
+Package pdftex.def Info: images//newuser.png  used on input line 188.
 (pdftex.def)             Requested size: 151.04546pt x 167.30632pt.
- [7 <./images//newuser.png>] [8]
-<images//mainkarty.png, id=48, 457.71pt x 242.70676pt>
+ [8 <./images//newuser.png>] [9]
+<images//mainkarty.png, id=53, 457.71pt x 242.70676pt>
 File: images//mainkarty.png Graphic file (type png)
 <use images//mainkarty.png>
-Package pdftex.def Info: images//mainkarty.png  used on input line 208.
+Package pdftex.def Info: images//mainkarty.png  used on input line 216.
 (pdftex.def)             Requested size: 228.85445pt x 121.35307pt.
-<images//mainhistoria.png, id=49, 457.71pt x 242.70676pt>
+<images//mainhistoria.png, id=54, 457.71pt x 242.70676pt>
 File: images//mainhistoria.png Graphic file (type png)
 <use images//mainhistoria.png>
-Package pdftex.def Info: images//mainhistoria.png  used on input line 209.
+Package pdftex.def Info: images//mainhistoria.png  used on input line 217.
 (pdftex.def)             Requested size: 228.85445pt x 121.35307pt.
- [9 <./images//mainkarty.png> <./images//mainhistoria.png>]
-<images//dodaj.png, id=55, 440.847pt x 295.70474pt>
+ [10 <./images//mainkarty.png> <./images//mainhistoria.png>]
+<images//dodaj.png, id=60, 440.847pt x 295.70474pt>
 File: images//dodaj.png Graphic file (type png)
 <use images//dodaj.png>
-Package pdftex.def Info: images//dodaj.png  used on input line 229.
+Package pdftex.def Info: images//dodaj.png  used on input line 237.
 (pdftex.def)             Requested size: 264.51024pt x 177.42421pt.
- [10 <./images//dodaj.png>]
-<images//usun.png, id=60, 440.847pt x 295.70474pt>
+ [11 <./images//dodaj.png>]
+<images//usun.png, id=65, 440.847pt x 295.70474pt>
 File: images//usun.png Graphic file (type png)
 <use images//usun.png>
-Package pdftex.def Info: images//usun.png  used on input line 250.
+Package pdftex.def Info: images//usun.png  used on input line 258.
 (pdftex.def)             Requested size: 264.51024pt x 177.42421pt.
- [11 <./images//usun.png>]
-<images//wplata.png, id=65, 440.847pt x 295.70474pt>
+ [12 <./images//usun.png>]
+<images//wplata.png, id=71, 440.847pt x 295.70474pt>
 File: images//wplata.png Graphic file (type png)
 <use images//wplata.png>
-Package pdftex.def Info: images//wplata.png  used on input line 283.
+Package pdftex.def Info: images//wplata.png  used on input line 291.
 (pdftex.def)             Requested size: 264.51024pt x 177.42421pt.
- [12 <./images//wplata.png>]
-Overfull \hbox (40.4022pt too wide) in paragraph at lines 294--295
+ [13 <./images//wplata.png>]
+Overfull \hbox (40.4022pt too wide) in paragraph at lines 302--303
 []\T1/cmr/m/n/12 Przycisku typu ra-dio z war-to-±ci¡, jak¡ chcemy wy-bra¢ (50,1
 00,200,300,500,Wªa-
  []
 
-<images//wyplata.png, id=71, 440.847pt x 295.70474pt>
+<images//wyplata.png, id=76, 440.847pt x 295.70474pt>
 File: images//wyplata.png Graphic file (type png)
 <use images//wyplata.png>
-Package pdftex.def Info: images//wyplata.png  used on input line 306.
+Package pdftex.def Info: images//wyplata.png  used on input line 314.
 (pdftex.def)             Requested size: 264.51024pt x 177.42421pt.
-[13 <./images//wyplata.png>]
-<images//przelew.png, id=76, 440.847pt x 295.70474pt>
+[14 <./images//wyplata.png>]
+<images//przelew.png, id=81, 440.847pt x 295.70474pt>
 File: images//przelew.png Graphic file (type png)
 <use images//przelew.png>
-Package pdftex.def Info: images//przelew.png  used on input line 338.
+Package pdftex.def Info: images//przelew.png  used on input line 346.
 (pdftex.def)             Requested size: 220.42296pt x 147.852pt.
- [14 <./images//przelew.png>]
+ [15 <./images//przelew.png>]
 ! Undefined control sequence.
 <recently read> \url 
                      
-l.350 ...jektu znajdujÄ… siÄ™ pod adresem:\\  \url
+l.358 ...jektu znajdujÄ… siÄ™ pod adresem:\\  \url
                                                   {https://www.github.com/os...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -402,29 +413,29 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[15] (./BankApp_Documentation.aux) ) 
+[16] [17] (./BankApp_Documentation.aux) ) 
 Here is how much of TeX's memory you used:
- 3295 strings out of 478268
- 56132 string characters out of 5846346
- 358193 words of memory out of 5000000
- 21474 multiletter control sequences out of 15000+600000
+ 3308 strings out of 478268
+ 56384 string characters out of 5846346
+ 358155 words of memory out of 5000000
+ 21487 multiletter control sequences out of 15000+600000
  480539 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,5n,67p,766b,353s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/e
-nc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/en
-c/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type
-1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/
-public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pu
-blic/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publ
-ic/cm-super/sfbx2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public
-/cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/c
-m-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-
-super/sfti1200.pfb>
-Output written on BankApp_Documentation.pdf (16 pages, 557188 bytes).
+{/usr/local/texlive/2022/texmf-dist/fo
+nts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2022/texmf-dist/fon
+ts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2022/texmf-dist/fonts
+/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/t
+ype1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
+e1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1
+/public/cm-super/sfbx2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/p
+ublic/cm-super/sfcc1728.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
+c/cm-super/sfti1200.pfb>
+Output written on BankApp_Documentation.pdf (18 pages, 582774 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 127 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
