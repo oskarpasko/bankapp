@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1d7287cb-3616-4b9a-a4d2-fe5864942f27" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/LoginFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/LoginFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/LoginFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/LoginFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/NewUser$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/NewUser$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/NewUser$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/NewUser$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BankApp/NewUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BankApp/NewUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LoginFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrzelewyFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PrzelewyFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RemoveCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RemoveCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WplataFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WyplataFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WyplataFrame.java" afterDir="false" />
-    </list>
+    <list default="true" id="1d7287cb-3616-4b9a-a4d2-fe5864942f27" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,19 +37,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;432&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/twork/Documents/Studia/2Rok/PO/Programy/Lab3Cw1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
-  }
-}</component>
   <component name="RunManager" selected="Application.LoginFrame">
     <configuration name="LoginFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LoginFrame" />
